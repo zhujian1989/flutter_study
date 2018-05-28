@@ -1,52 +1,33 @@
-import 'dart:convert';
-import 'dart:io';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_study/model/FLModel.dart';
+import 'package:flutter_study/mvp/presenter/FLPresenterImpl.dart';
+import 'package:flutter_study/mvp/presenter/FLPresenter.dart';
 
 class SampleAppPage extends StatefulWidget {
   SampleAppPage({Key key}) : super(key: key);
 
   @override
-  _SampleAppPageState createState() => new _SampleAppPageState();
+  _SampleAppPageState createState() {
+    _SampleAppPageState view = new _SampleAppPageState();
+    FLPresenterImpl presenter = new FLPresenterImpl(view);
+    presenter.init();
+    return view;
+  }
 }
 
-class _SampleAppPageState extends State<SampleAppPage> {
-  List datas = [];
+class _SampleAppPageState extends State<SampleAppPage> implements FLView {
+  List<FLModel> datas = [];
 
-  _getFLData() async {
-
-    var url = 'http://gank.io/api/data/福利/10/1';
-
-    var httpClient = new HttpClient();
-
-    List result;
-    try {
-      var request = await httpClient.getUrl(Uri.parse(url));
-      var response = await request.close();
-      if (response.statusCode == HttpStatus.OK) {
-        var json = await response.transform(UTF8.decoder).join();
-        result = jsonDecode(json)['results'];
-      } else {
-        //todo
-      }
-    } catch (exception) {
-      //todo
-    }
-
-    // If the widget was removed from the tree while the message was in flight,
-    // we want to discard the reply rather than calling setState to update our
-    // non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      datas = result;
-    });
-  }
+  FLPresenterImpl _flPresenter;
 
   @override
   void initState() {
     super.initState();
-    _getFLData();
+    _loadData(1, 10);
+  }
+
+  _loadData(int pageNum,int pageSize){
+    _flPresenter.loadFLData(1, 10);
   }
 
   @override
@@ -65,17 +46,33 @@ class _SampleAppPageState extends State<SampleAppPage> {
       );
     }
 
-
     return content;
   }
 
-  Widget buildCard(BuildContext context,int index){
-    final String item = datas[index]['url'];
+  Widget buildCard(BuildContext context, int index) {
+    final String item = datas[index].url;
     return new Card(
       child: new Image.network(item),
     );
   }
 
+  @override
+  void onloadFLFail() {
+    // TODO: implement onloadFLFail
+  }
+
+  @override
+  void onloadFLSuc(List<FLModel> list) {
+    setState(() {
+      datas = list;
+    });
+  }
+
+  @override
+  setPresenter(FLPresenter presenter) {
+    // TODO: implement setPresenter
+    _flPresenter = presenter;
+  }
 }
 
 class TabGirlPage extends StatelessWidget {
