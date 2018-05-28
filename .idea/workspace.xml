@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a523a76-0bfc-4dca-82ae-75304c3ab0c3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/TabGirlPage.dart" afterPath="$PROJECT_DIR$/lib/widget/TabGirlPage.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -22,15 +23,15 @@
   <component name="DartProblemsView" auto-scroll-to-source="true" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TabGirlPage.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TabGirlPage.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/widget/TabGirlPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="81" column="6" lean-forward="false" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
+            <state relative-caret-position="187">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
-                <element signature="e#178#306#0" expanded="false" />
-                <element signature="e#1179#1225#0" expanded="false" />
+                <element signature="e#126#254#0" expanded="false" />
+                <element signature="e#1127#1173#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -48,12 +49,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="85">
-                <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <first_editor relative-caret-position="68">
+                <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -118,9 +119,9 @@
         <option value="$PROJECT_DIR$/lib/widget/TabiOSPage.dart" />
         <option value="$PROJECT_DIR$/lib/widget/home_page.dart" />
         <option value="$PROJECT_DIR$/lib/widget/Home_page.dart" />
-        <option value="$PROJECT_DIR$/lib/widget/TabGirlPage.dart" />
         <option value="$PROJECT_DIR$/lib/util/PrintUtil.dart" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/lib/widget/TabGirlPage.dart" />
       </list>
     </option>
   </component>
@@ -392,7 +393,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
           <url>file://$PROJECT_DIR$/lib/widget/TabGirlPage.dart</url>
-          <line>6</line>
+          <line>5</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -407,8 +408,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#178#306#0" expanded="false" />
-            <element signature="e#1179#1225#0" expanded="false" />
+            <element signature="e#126#254#0" expanded="false" />
+            <element signature="e#1127#1173#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -453,8 +454,8 @@
           <caret line="35" column="3" lean-forward="false" selection-start-line="35" selection-start-column="3" selection-end-line="39" selection-end-column="6" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#178#306#0" expanded="false" />
-            <element signature="e#1179#1225#0" expanded="false" />
+            <element signature="e#126#254#0" expanded="false" />
+            <element signature="e#1127#1173#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -650,18 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/TabGirlPage.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="81" column="6" lean-forward="false" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#178#306#0" expanded="false" />
-            <element signature="e#1179#1225#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/util/PrintUtil.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -683,11 +672,23 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="85">
-            <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widget/TabGirlPage.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#126#254#0" expanded="false" />
+            <element signature="e#1127#1173#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_study/util/PrintUtil.dart';
 
 class SampleAppPage extends StatefulWidget {
   SampleAppPage({Key key}) : super(key: key);
