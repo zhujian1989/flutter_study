@@ -3,19 +3,19 @@ import 'package:flutter_study/model/FLModel.dart';
 import 'package:flutter_study/mvp/presenter/FLPresenterImpl.dart';
 import 'package:flutter_study/mvp/presenter/FLPresenter.dart';
 
-class SampleAppPage extends StatefulWidget {
-  SampleAppPage({Key key}) : super(key: key);
+class GirlsAppPage extends StatefulWidget {
+  GirlsAppPage({Key key}) : super(key: key);
 
   @override
-  _SampleAppPageState createState() {
-    _SampleAppPageState view = new _SampleAppPageState();
+  _GirlsAppPageState createState() {
+    _GirlsAppPageState view = new _GirlsAppPageState();
     FLPresenterImpl presenter = new FLPresenterImpl(view);
     presenter.init();
     return view;
   }
 }
 
-class _SampleAppPageState extends State<SampleAppPage> implements FLView {
+class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
   List<FLModel> datas = [];
 
   FLPresenterImpl _flPresenter;
@@ -80,7 +80,7 @@ class TabGirlPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-      body: new SampleAppPage(),
+      body: new GirlsAppPage(),
     );
   }
 }
