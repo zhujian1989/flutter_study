@@ -1,7 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_study/model/FLModel.dart';
-import 'package:flutter_study/mvp/presenter/FLPresenterImpl.dart';
 import 'package:flutter_study/mvp/presenter/FLPresenter.dart';
+import 'package:flutter_study/mvp/presenter/FLPresenterImpl.dart';
+
+final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
+    new GlobalKey<RefreshIndicatorState>();
 
 class GirlsAppPage extends StatefulWidget {
   GirlsAppPage({Key key}) : super(key: key);
@@ -15,51 +20,68 @@ class GirlsAppPage extends StatefulWidget {
   }
 }
 
-class _GirlsAppPageState extends State<GirlsAppPage> with WidgetsBindingObserver implements FLView {
-
-  AppLifecycleState _lastLifecyleState;
+class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
+  ScrollController _scrollController;
 
   List<FLModel> datas = [];
 
   FLPresenterImpl _flPresenter;
 
+  int curPageNum = 1;
+
+  bool isSlideUp = false;
+
+  void _scrollListener() {
+    if (_scrollController.position.extentAfter == 0) {
+      setState(() {
+        _loadData();
+      });
+    }
+  }
+
   @override
   void initState() {
     super.initState();
-    _loadData(1, 10);
-    WidgetsBinding.instance.addObserver(this);
-    print('initState');
+    _refreshData();
+    _scrollController = new ScrollController()..addListener(_scrollListener);
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
-    print('dispose');
+    _scrollController.removeListener(_scrollListener);
   }
 
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
+  Future<Null> _refreshData() {
+    isSlideUp = false;
 
-    switch(state) {
-      case AppLifecycleState.paused:
-        print('AppLifecycleState.paused');
-        break;
-      case AppLifecycleState.resumed:
-        print('AppLifecycleState.resumed');
-        break;
-      default:
-        break;
-    }
+    final Completer<Null> completer = new Completer<Null>();
 
-//
-//    setState(() {
-//      _lastLifecyleState = state;
-//    });
+    curPageNum = 1;
+
+    _flPresenter.loadFLData(curPageNum, 10);
+
+    setState(() {});
+
+    completer.complete(null);
+
+    return completer.future;
   }
 
-  _loadData(int pageNum,int pageSize){
-    _flPresenter.loadFLData(1, 10);
+  Future<Null> _loadData() {
+    isSlideUp = true;
+
+    final Completer<Null> completer = new Completer<Null>();
+
+    curPageNum = curPageNum + 1;
+
+    _flPresenter.loadFLData(curPageNum, 10);
+
+    setState(() {});
+
+    completer.complete(null);
+
+    return completer.future;
   }
 
   @override
@@ -73,12 +95,19 @@ class _GirlsAppPageState extends State<GirlsAppPage> with WidgetsBindingObserver
       );
     } else {
       content = new ListView.builder(
+        controller: _scrollController,
         itemCount: datas.length,
         itemBuilder: buildCard,
       );
     }
 
-    return content;
+    var _refreshIndicator = new RefreshIndicator(
+      key: _refreshIndicatorKey,
+      onRefresh: _refreshData,
+      child: content,
+    );
+
+    return _refreshIndicator;
   }
 
   Widget buildCard(BuildContext context, int index) {
@@ -97,7 +126,11 @@ class _GirlsAppPageState extends State<GirlsAppPage> with WidgetsBindingObserver
   void onloadFLSuc(List<FLModel> list) {
     if (!mounted) return; //异步处理，防止报错
     setState(() {
-      datas = list;
+      if (isSlideUp) {
+        datas.addAll(list);
+      } else {
+        datas = list;
+      }
     });
   }
 
