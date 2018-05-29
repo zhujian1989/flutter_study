@@ -8,63 +8,61 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => new _HomePageState();
 }
 
-//用于使用到了一点点的动画效果，因此加入了SingleTickerProviderStateMixin
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
-  final List<Tab> _bottomTabs = <Tab>[
-    new Tab(
-      icon: new Icon(Icons.home),
-      text: '妹子',
-    ),
-    new Tab(
-      icon: new Icon(Icons.phone_android),
-      text: 'Android',
-    ),
-    new Tab(
-      icon: new Icon(Icons.phone_iphone),
-      text: 'iOS',
-    ),
-  ];
-
-  //定义底部导航Tab
-  TabController _bottomNavigation;
-
-  //初始化导航Tab控制器
   @override
   void initState() {
     super.initState();
-    _bottomNavigation = new TabController(
-        vsync: this,
-        length: _bottomTabs.length
-        );
   }
 
-  //当整个页面dispose时，记得把控制器也dispose掉，释放内存
   @override
   void dispose() {
-    _bottomNavigation.dispose();
     super.dispose();
+  }
+
+  var _body;
+
+  var _curIndex = 0;
+
+  _initPage() {
+    _body = new IndexedStack(
+      children: <Widget>[
+        new TabGirlPage(),
+        new TabAndroidPage(),
+        new TabiOSPage(),
+      ],
+      index: _curIndex,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
+    _initPage();
+
     return new Scaffold(
-        appBar: new AppBar(
-          backgroundColor: Colors.green,
-          title: new Text('flutter study'),
-        ), //头部的标题AppBar
-        body: new TabBarView(controller: _bottomNavigation, children: [
-          new TabGirlPage(),
-          new TabAndroidPage(),
-          new TabiOSPage(),
-        ]),
-        bottomNavigationBar: new Material(
-          color: Colors.green,
-          child: new TabBar(
-            controller: _bottomNavigation,
-            tabs: _bottomTabs,
-            indicatorColor: Colors.white,
-          ),
-        ));
+      appBar: new AppBar(
+        title: new Text('flutter study'),
+        centerTitle: true,
+      ), //头部的标题AppBar
+      bottomNavigationBar: new BottomNavigationBar(
+        items: [
+          new BottomNavigationBarItem(
+              icon: new Icon(Icons.home), title: new Text("妹子")),
+          new BottomNavigationBarItem(
+              icon: new Icon(Icons.phone_android), title: new Text("Android")),
+          new BottomNavigationBarItem(
+              icon: new Icon(Icons.phone_iphone), title: new Text("iOS")),
+        ],
+        currentIndex: _curIndex,
+        type: BottomNavigationBarType.fixed,
+        onTap: (index) {
+          setState(() {
+            print(index);
+            _curIndex = index;
+          });
+        },
+      ),
+      body: _body,
+    );
   }
 }

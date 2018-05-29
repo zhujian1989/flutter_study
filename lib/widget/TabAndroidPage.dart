@@ -15,6 +15,8 @@ class AndroidAppPage extends StatefulWidget {
   }
 }
 
+//automatic keepalive
+
 class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
   List<AIModel> datas = [];
 
@@ -65,6 +67,7 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
 
   @override
   void onloadFLSuc(List<AIModel> list) {
+    if (!mounted) return; //异步处理，防止报错
     setState(() {
       datas = list;
     });

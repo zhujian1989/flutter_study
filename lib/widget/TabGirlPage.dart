@@ -15,7 +15,10 @@ class GirlsAppPage extends StatefulWidget {
   }
 }
 
-class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
+class _GirlsAppPageState extends State<GirlsAppPage> with WidgetsBindingObserver implements FLView {
+
+  AppLifecycleState _lastLifecyleState;
+
   List<FLModel> datas = [];
 
   FLPresenterImpl _flPresenter;
@@ -24,6 +27,35 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
   void initState() {
     super.initState();
     _loadData(1, 10);
+    WidgetsBinding.instance.addObserver(this);
+    print('initState');
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+    print('dispose');
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+
+    switch(state) {
+      case AppLifecycleState.paused:
+        print('AppLifecycleState.paused');
+        break;
+      case AppLifecycleState.resumed:
+        print('AppLifecycleState.resumed');
+        break;
+      default:
+        break;
+    }
+
+//
+//    setState(() {
+//      _lastLifecyleState = state;
+//    });
   }
 
   _loadData(int pageNum,int pageSize){
@@ -63,6 +95,7 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
 
   @override
   void onloadFLSuc(List<FLModel> list) {
+    if (!mounted) return; //异步处理，防止报错
     setState(() {
       datas = list;
     });
