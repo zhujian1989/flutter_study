@@ -1,7 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_study/model/AIModel.dart';
 import 'package:flutter_study/mvp/presenter/AIPresenter.dart';
 import 'package:flutter_study/mvp/presenter/AIPresenterImpl.dart';
+
+final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
+    new GlobalKey<RefreshIndicatorState>();
 
 class AndroidAppPage extends StatefulWidget {
   AndroidAppPage({Key key}) : super(key: key);
@@ -15,21 +20,72 @@ class AndroidAppPage extends StatefulWidget {
   }
 }
 
-//automatic keepalive
-
 class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
+
+  ScrollController _scrollController;
+
   List<AIModel> datas = [];
 
   AIPresenterImpl _alPresenter;
 
+  int curPageNum = 1;
+
+  bool isSlideUp = false;
+
   @override
   void initState() {
     super.initState();
-    _loadData(1, 10);
+    _scrollController = new ScrollController()..addListener(_scrollListener);
+    _refreshData();
   }
 
-  _loadData(int pageNum, int pageSize) {
-    _alPresenter.loadAIData("Android", 1, 10);
+
+  @override
+  void dispose() {
+    _scrollController.removeListener(_scrollListener);
+    super.dispose();
+  }
+
+
+  void _scrollListener() {
+    if (_scrollController.position.extentAfter == 0) {
+      setState(() {
+        print('loadmore');
+        _loadData();
+      });
+    }
+  }
+
+  Future<Null> _refreshData() {
+    isSlideUp = false;
+
+    final Completer<Null> completer = new Completer<Null>();
+
+    curPageNum = 1;
+
+    _alPresenter.loadAIData("Android", curPageNum, 10);
+
+    setState(() {});
+
+    completer.complete(null);
+
+    return completer.future;
+  }
+
+  Future<Null>  _loadData() {
+    isSlideUp = true;
+
+    final Completer<Null> completer = new Completer<Null>();
+
+    curPageNum = curPageNum + 1;
+
+    _alPresenter.loadAIData("Android", curPageNum, 10);
+
+    setState(() {});
+
+    completer.complete(null);
+
+    return completer.future;
   }
 
   @override
@@ -43,21 +99,30 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
       );
     } else {
       content = new ListView.builder(
+        controller: _scrollController,
         itemCount: datas.length,
         itemBuilder: buildItem,
       );
     }
 
-    return content;
+    var _refreshIndicator = new RefreshIndicator(
+      key: _refreshIndicatorKey,
+      onRefresh: _refreshData,
+      child: content,
+    );
+
+    return _refreshIndicator;
   }
 
   Widget buildItem(BuildContext context, int index) {
     final AIModel item = datas[index];
     return new ListTile(
       title: new Text(item.desc), //子item的标题
-      trailing: new Icon(Icons.arrow_right,color: Colors.green,),//显示右侧的箭头，不显示则传null
+      trailing: new Icon(
+        Icons.arrow_right,
+        color: Colors.green,
+      ), //显示右侧的箭头，不显示则传null
     );
-
   }
 
   @override
@@ -69,7 +134,11 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
   void onloadFLSuc(List<AIModel> list) {
     if (!mounted) return; //异步处理，防止报错
     setState(() {
-      datas = list;
+      if (isSlideUp) {
+        datas.addAll(list);
+      } else {
+        datas = list;
+      }
     });
   }
 

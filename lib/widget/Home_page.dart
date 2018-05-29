@@ -41,6 +41,7 @@ class _HomePageState extends State<HomePage>
 
     return new Scaffold(
       appBar: new AppBar(
+        backgroundColor: Colors.green,
         title: new Text('flutter study'),
         centerTitle: true,
       ), //头部的标题AppBar
@@ -57,10 +58,10 @@ class _HomePageState extends State<HomePage>
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
-            print(index);
             _curIndex = index;
           });
         },
+          fixedColor:Colors.green,
       ),
       body: _body,
     );
