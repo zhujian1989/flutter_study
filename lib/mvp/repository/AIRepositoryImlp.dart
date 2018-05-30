@@ -36,12 +36,7 @@ Future<List<AIModel>> _getData(String type, int pageNum, int pageSize) async {
   }
 
   return aiModels.map((model) {
-    return new AIModel(
-        desc: model['desc'],
-        images: model['images'],
-        publishedAt: model['publishedAt'],
-        url: model['url'],
-        who: model['who']);
+    return new AIModel.fromJson(model);
   }).toList();
 }
 

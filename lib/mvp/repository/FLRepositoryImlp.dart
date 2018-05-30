@@ -39,9 +39,9 @@ Future<List<FLModel>> _getData(int pageNum,int pageSize) async {
   } catch (exception) {
     //todo
   }
-
+  
   return flModels.map((model) {
-    return new FLModel(url: model['url']);
+    return new FLModel.fromJson(model);
   }).toList();
 }
 
