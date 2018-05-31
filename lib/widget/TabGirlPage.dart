@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/model/FLModel.dart';
 import 'package:flutter_study/mvp/presenter/FLPresenter.dart';
 import 'package:flutter_study/mvp/presenter/FLPresenterImpl.dart';
+import 'package:flutter_study/common/widget/ProgreessDialog.dart';
 
 final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
     new GlobalKey<RefreshIndicatorState>();
@@ -14,7 +15,7 @@ class GirlsAppPage extends StatefulWidget {
   @override
   _GirlsAppPageState createState() {
     _GirlsAppPageState view = new _GirlsAppPageState();
-    FLPresenterImpl presenter = new FLPresenterImpl(view);
+    FLPresenter presenter = new FLPresenterImpl(view);
     presenter.init();
     return view;
   }
@@ -25,7 +26,7 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
 
   List<FLModel> datas = [];
 
-  FLPresenterImpl _flPresenter;
+  FLPresenter _flPresenter;
 
   int curPageNum = 1;
 
@@ -88,11 +89,8 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
   Widget build(BuildContext context) {
     var content;
 
-    if (datas == null) {
-      content = new Center(
-        // 可选参数 child:
-        child: new CircularProgressIndicator(),
-      );
+    if (datas.isEmpty) {
+      content = getProgressDialog();
     } else {
       content = new ListView.builder(
         controller: _scrollController,

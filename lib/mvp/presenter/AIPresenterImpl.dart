@@ -1,10 +1,11 @@
 import 'package:flutter_study/mvp/presenter/AIPresenter.dart';
 import 'package:flutter_study/mvp/repository/AIRepositoryImlp.dart';
+import 'package:flutter_study/mvp/repository/AIRepository.dart';
 
 class AIPresenterImpl implements AIPresenter {
   AIView _view;
 
-  AIRepositoryImlp _repository;
+  AIRepository _repository;
 
   AIPresenterImpl(this._view) {
     _view.setPresenter(this);

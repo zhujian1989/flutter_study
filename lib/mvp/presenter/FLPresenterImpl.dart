@@ -1,10 +1,11 @@
 import 'package:flutter_study/mvp/presenter/FLPresenter.dart';
 import 'package:flutter_study/mvp/repository/FLRepositoryImlp.dart';
+import 'package:flutter_study/mvp/repository/FLRepository.dart';
 
 class FLPresenterImpl implements FLPresenter {
   FLView _view;
 
-  FLRepositoryImlp _repository;
+  FLRepository _repository;
 
   FLPresenterImpl(this._view) {
     _view.setPresenter(this);

@@ -1,9 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_study/model/AIModel.dart';
 import 'package:flutter_study/mvp/presenter/AIPresenter.dart';
 import 'package:flutter_study/mvp/presenter/AIPresenterImpl.dart';
+import 'package:flutter_study/common/widget/ProgreessDialog.dart';
 
 final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
     new GlobalKey<RefreshIndicatorState>();
@@ -14,7 +14,7 @@ class AndroidAppPage extends StatefulWidget {
   @override
   _AndroidAppPageState createState() {
     _AndroidAppPageState view = new _AndroidAppPageState();
-    AIPresenterImpl presenter = new AIPresenterImpl(view);
+    AIPresenter presenter = new AIPresenterImpl(view);
     presenter.init();
     return view;
   }
@@ -26,7 +26,7 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
 
   List<AIModel> datas = [];
 
-  AIPresenterImpl _alPresenter;
+  AIPresenter _alPresenter;
 
   int curPageNum = 1;
 
@@ -92,11 +92,8 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
   Widget build(BuildContext context) {
     var content;
 
-    if (datas == null) {
-      content = new Center(
-        // 可选参数 child:
-        child: new CircularProgressIndicator(),
-      );
+    if (datas.isEmpty) {
+      content = getProgressDialog();
     } else {
       content = new ListView.builder(
         controller: _scrollController,
