@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/common/widget/ProgreessDialog.dart';
-
+import 'package:flutter_study/widget/CommonItem.dart';
 class iOSAppPage extends StatefulWidget{
 
   @override
@@ -17,7 +16,12 @@ class _iOSAppPageState extends State<iOSAppPage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return getProgressDialog();
+    return new Scaffold(
+        body:  new ListView.builder(
+            itemCount: 10,
+            itemBuilder: buildCommonItem
+        ),
+    );
   }
 }
 

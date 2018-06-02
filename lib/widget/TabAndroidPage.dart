@@ -117,7 +117,6 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
       title: new Text(item.desc), //子item的标题
       trailing: new Icon(
         Icons.arrow_right,
-        color: Colors.green,
       ), //显示右侧的箭头，不显示则传null
     );
   }
