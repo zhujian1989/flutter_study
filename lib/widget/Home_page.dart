@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_study/widget/TabAndroidPage.dart';
 import 'package:flutter_study/widget/TabGirlPage.dart';
 import 'package:flutter_study/widget/TabiOSPage.dart';
-
+import 'package:flutter_study/widget/DrawerPage.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => new _HomePageState();
@@ -35,11 +35,6 @@ class _HomePageState extends State<HomePage>
     );
   }
 
-  _onPressed() {
-    Navigator.pushNamed(context, '/RoutePage');
-  }
-
-
   @override
   Widget build(BuildContext context) {
     _initPage();
@@ -49,6 +44,9 @@ class _HomePageState extends State<HomePage>
         title: new Text('flutter study'),
         centerTitle: true,
       ), //头部的标题AppBar
+      drawer: new Drawer(
+        child: new DrawerPage(),
+      ),
       bottomNavigationBar: new BottomNavigationBar(
         items: [
           new BottomNavigationBarItem(
@@ -67,9 +65,6 @@ class _HomePageState extends State<HomePage>
         },
       ),
       body: _body,
-      floatingActionButton: new FloatingActionButton(
-          child:new Text("路由"),
-          onPressed: _onPressed),
     );
   }
 }
