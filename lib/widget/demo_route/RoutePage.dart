@@ -46,7 +46,7 @@ class _RouteAppPageState extends State<RouteAppPage> {
     Navigator.of(context).push(new PageRouteBuilder(
         opaque: false,
         pageBuilder: (BuildContext context, _, __) {
-          return new RoutePageWithValue('from_路由测试4');
+          return new RoutePageWithValue('来自RoutePage路由测试3');
         },
         transitionsBuilder: (_, Animation<double> animation, __, Widget child) {
           return new FadeTransition(
@@ -63,7 +63,6 @@ class _RouteAppPageState extends State<RouteAppPage> {
     // 带返回值
     Navigator.of(context).pushNamed('/RoutePageWithValue1').then((value) {
       _result = value;
-      print(value);
     });
   }
 
