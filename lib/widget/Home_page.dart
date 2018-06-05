@@ -35,6 +35,11 @@ class _HomePageState extends State<HomePage>
     );
   }
 
+  _onPressed() {
+    Navigator.pushNamed(context, '/RoutePage');
+  }
+
+
   @override
   Widget build(BuildContext context) {
     _initPage();
@@ -62,6 +67,9 @@ class _HomePageState extends State<HomePage>
         },
       ),
       body: _body,
+      floatingActionButton: new FloatingActionButton(
+          child:new Text("路由"),
+          onPressed: _onPressed),
     );
   }
 }

@@ -19,7 +19,8 @@ class _iOSAppPageState extends State<iOSAppPage> {
     return new Scaffold(
         body:  new ListView.builder(
             itemCount: 10,
-            itemBuilder: buildCommonItem
+            itemBuilder: buildCommonItem,
+
         ),
     );
   }
