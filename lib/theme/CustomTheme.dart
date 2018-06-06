@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 //iOS系统主题
 final ThemeData kiOSTheme = new ThemeData(
-  primaryColor: Colors.red,
+  primarySwatch: Colors.red,
 );
 
 
 // Android系统主题
 final ThemeData kAndroidTheme = new ThemeData(
-  primaryColor: Colors.blue,
+  primarySwatch: Colors.blue,
 
 );
