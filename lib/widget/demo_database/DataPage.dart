@@ -301,7 +301,7 @@ class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
   void _requestExternalStorageDirectory() async {
     Directory sdCardDir = await getExternalStorageDirectory();
     setState(() {
-      appDocPath = sdCardDir.path;
+      sdCardPath = sdCardDir.path;
     });
   }
 
