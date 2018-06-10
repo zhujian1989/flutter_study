@@ -66,7 +66,20 @@ class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     if (username.isEmpty || pwd.isEmpty) {
-
+      setState(() {
+        showDialog<Null>(
+          context: context,
+          child: new AlertDialog(
+              content: new Text('用户名和密码不能为空'),
+              actions: <Widget>[
+                new FlatButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: new Text('确定'))
+              ]),
+        );
+      });
 
       return;
     }
@@ -80,22 +93,17 @@ class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
     });
   }
 
-  _delete() async{
-
+  _delete() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    prefs.setString(USERNAME, null);
-
-    prefs.setString(PWD, null);
+    prefs.clear();
 
     setState(() {
       _result = '_delete 成功, 请点击查验证结果';
     });
-
   }
 
-  _update() async{
-
+  _update() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     prefs.setString(USERNAME, 'Paul');
@@ -105,7 +113,6 @@ class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
     setState(() {
       _result = '_update 成功，用户名修改为Paul，密码修改为654321, 请点击查验证结果';
     });
-
   }
 
   _query() async {
@@ -161,8 +168,6 @@ class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
   }
 }
 
-
-
 class HandleSQLiteDataWidget extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -170,9 +175,7 @@ class HandleSQLiteDataWidget extends StatefulWidget {
   }
 }
 
-
 class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
-
   // TODO: implement build
 
   var _result;
@@ -185,10 +188,8 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
 
   _query() {}
 
-
   @override
   Widget build(BuildContext context) {
-
     return new Column(
       children: <Widget>[
         new Padding(
