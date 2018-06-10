@@ -47,14 +47,18 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
   }
 
 
+
   void _scrollListener() {
-    if (_scrollController.position.extentAfter == 0) {
+
+    if (_scrollController.position.pixels ==
+        _scrollController.position.maxScrollExtent) {
       setState(() {
-        print('loadmore');
+        print('load');
         _loadData();
       });
     }
   }
+
 
   Future<Null> _refreshData() {
     isSlideUp = false;

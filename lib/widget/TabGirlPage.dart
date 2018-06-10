@@ -33,8 +33,11 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
   bool isSlideUp = false;
 
   void _scrollListener() {
-    if (_scrollController.position.extentAfter == 0) {
+
+    if (_scrollController.position.pixels ==
+        _scrollController.position.maxScrollExtent) {
       setState(() {
+        print('load');
         _loadData();
       });
     }

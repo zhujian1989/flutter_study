@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 String username = '';
@@ -45,6 +48,11 @@ class _DataAppPageState extends State<DataAppPage> {
             padding: const EdgeInsets.only(
                 top: 10.0, left: 10.0, bottom: 10.0, right: 10.0),
             child: new HandleSQLiteDataWidget(),
+          ),
+          new Padding(
+            padding: const EdgeInsets.only(
+                top: 10.0, left: 10.0, bottom: 10.0, right: 10.0),
+            child: new HandleFileDataWidget(),
           ),
         ],
       ),
@@ -223,6 +231,144 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
   }
 }
 
+class HandleFileDataWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return new _HandleFileDataWidgetState();
+  }
+}
+
+class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
+  // TODO: implement build
+
+  String tempPath;
+
+  String appDocPath;
+
+  String sdCardPath;
+
+  var _result;
+
+  _add() async{
+    File file = new File('$tempPath/user.txt');
+    await file.writeAsString('用户名:$username\n密码:$pwd');
+    setState(() {
+      _result ='写入成功，请查询';
+    });
+  }
+
+  _delete() {
+    File file = new File('$tempPath/user.txt');
+    file.deleteSync(recursive:false);
+    setState(() {
+      _result='删除成功，请查看';
+    });
+  }
+
+  _update() async{
+    File file = new File('$tempPath/user.txt');
+    await file.writeAsString('用户名:Paul\n密码:654321');
+    setState(() {
+      _result ='修改成功，请查询';
+    });
+  }
+
+  _query() async {
+    try {
+      File file = new File('$tempPath/user.txt');
+      _result = '查询成功\n'+await file.readAsString();
+    } on FileSystemException{
+      _result = '文件不存在';
+    }
+
+    setState(() {
+
+    });
+  }
+
+  void _requestTempDirectory() async {
+    Directory tempDir = await getTemporaryDirectory();
+    setState(() {
+      tempPath = tempDir.path;
+    });
+  }
+
+  void _requestAppDocumentsDirectory() async {
+    Directory appDocDir = await getApplicationDocumentsDirectory();
+    setState(() {
+      appDocPath = appDocDir.path;
+    });
+  }
+
+  void _requestExternalStorageDirectory() async {
+    Directory sdCardDir = await getExternalStorageDirectory();
+    setState(() {
+      appDocPath = sdCardDir.path;
+    });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    _requestTempDirectory();
+
+    _requestAppDocumentsDirectory();
+
+    _requestExternalStorageDirectory();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Column(
+      children: <Widget>[
+        new Padding(
+          padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+          child: new Text('文件用法'),
+        ),
+        new Row(
+          children: <Widget>[
+            new RaisedButton(
+                textColor: Colors.black, child: new Text('增'), onPressed: _add),
+            new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('删'),
+                onPressed: _delete),
+            new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('改'),
+                onPressed: _update),
+            new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('查'),
+                onPressed: _query),
+          ],
+        ),
+        new Padding(
+          padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
+          child: new Text('结果：$_result'),
+        ),
+        new Text('缓存文件路径:'),
+        new Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: new Text('$tempPath'),
+        ),
+        new Text('应用文件路径:'),
+        new Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: new Text('$appDocPath'),
+        ),
+        new Text('Android SD卡路径:'),
+        new Padding(
+          padding: const EdgeInsets.only(bottom: 10.0),
+          child: new Text('$sdCardPath'),
+        ),
+      ],
+    );
+  }
+}
+
 class LoginWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -251,7 +397,7 @@ class LoginWidget extends StatelessWidget {
           obscureText: true,
           maxLines: 1,
           decoration:
-              new InputDecoration(hintText: '请输入长度大于6的密码', labelText: '密码'),
+          new InputDecoration(hintText: '请输入长度大于6的密码', labelText: '密码'),
           keyboardType: TextInputType.text,
           onSubmitted: (text) {},
         ),
