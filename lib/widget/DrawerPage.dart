@@ -30,6 +30,14 @@ class _DrawerWeigetState extends State<DrawerWeiget> {
               Navigator.pushNamed(context, '/RoutePage');
             }),
         new Divider(),
+        new ListTile(
+            title: new Text('数据存储 学习'),
+            trailing: new Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/DataPage');
+            }),
+        new Divider(),
       ],
     );
   }

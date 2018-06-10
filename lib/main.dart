@@ -3,7 +3,7 @@ import 'package:flutter_study/theme/CustomTheme.dart';
 import 'package:flutter_study/widget/Home_page.dart';
 import 'package:flutter_study/widget/demo_route/RoutePage.dart';
 import 'package:flutter_study/widget/demo_route/RoutePageWithValue1.dart';
-
+import 'package:flutter_study/widget/demo_database/DataPage.dart';
 void main() => runApp(new MaterialApp(
 //    theme: defaultTargetPlatform == TargetPlatform.iOS
 //        ? kiOSTheme
@@ -13,5 +13,7 @@ void main() => runApp(new MaterialApp(
       '/RoutePage': (BuildContext context) => new RoutePage(),
       '/RoutePageWithValue1': (BuildContext context) =>
           new RoutePageWithValue1(),
+      '/DataPage': (BuildContext context) => new DataAppPage(),
+
     },
     home: new HomePage()));

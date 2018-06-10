@@ -71,7 +71,7 @@ class _RouteAppPageState extends State<RouteAppPage> {
     // TODO: implement build
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('route page'),
+        title: new Text('Route 学习'),
         centerTitle: true,
       ),
       body: new Center(

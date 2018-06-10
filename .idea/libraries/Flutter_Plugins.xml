@@ -1,6 +1,9 @@
 <component name="libraryTable">
   <library name="Flutter Plugins" type="FlutterPluginsLibraryType">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-0.4.2" />
+      <root url="file://$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.flutter-io.cn/sqflite-0.9.0" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>
