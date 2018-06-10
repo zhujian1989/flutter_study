@@ -249,41 +249,39 @@ class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
 
   var _result;
 
-  _add() async{
+  _add() async {
     File file = new File('$tempPath/user.txt');
     await file.writeAsString('用户名:$username\n密码:$pwd');
     setState(() {
-      _result ='写入成功，请查询';
+      _result = '写入成功，请查询';
     });
   }
 
   _delete() {
     File file = new File('$tempPath/user.txt');
-    file.deleteSync(recursive:false);
+    file.deleteSync(recursive: false);
     setState(() {
-      _result='删除成功，请查看';
+      _result = '删除成功，请查看';
     });
   }
 
-  _update() async{
+  _update() async {
     File file = new File('$tempPath/user.txt');
     await file.writeAsString('用户名:Paul\n密码:654321');
     setState(() {
-      _result ='修改成功，请查询';
+      _result = '修改成功，请查询';
     });
   }
 
   _query() async {
     try {
       File file = new File('$tempPath/user.txt');
-      _result = '查询成功\n'+await file.readAsString();
-    } on FileSystemException{
-      _result = '文件不存在';
+      _result = '查询成功\n' + await file.readAsString();
+    } on Exception catch (e) {
+      _result = ' exception: $e';
     }
 
-    setState(() {
-
-    });
+    setState(() {});
   }
 
   void _requestTempDirectory() async {
@@ -397,7 +395,7 @@ class LoginWidget extends StatelessWidget {
           obscureText: true,
           maxLines: 1,
           decoration:
-          new InputDecoration(hintText: '请输入长度大于6的密码', labelText: '密码'),
+              new InputDecoration(hintText: '请输入长度大于6的密码', labelText: '密码'),
           keyboardType: TextInputType.text,
           onSubmitted: (text) {},
         ),
