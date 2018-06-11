@@ -25,7 +25,7 @@ Flutter英文网：https://flutter.io
 Flutter中文网：https://flutterchina.club  
 Flutter社区：http://flutter-dev.cn/  
 Color API ：https://docs.flutter.io/flutter/material/Colors-class.html    
-https://pub.dartlang.org/         
+第三方插件：https://pub.dartlang.org/         
 sqflite：https://pub.dartlang.org/packages/sqflite  
 shared_preferences：https://pub.dartlang.org/packages/shared_preferences  
 path_provider：https://pub.dartlang.org/packages/path_provider  
