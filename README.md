@@ -5,7 +5,7 @@
 后续会将未来学到的新知识点用到该项目，持续更新
 
 
-<img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/1.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/2.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/3.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/4.png" width="200">
+<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/2.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200">
 
 
 ## 知识点
@@ -16,7 +16,8 @@
 5.主题学习  
 6.路由  
 7.drawer    
-8.数据存储三种方式（文件，SharedPreference，sqflite）
+8.数据存储三种方式（文件，SharedPreference，sqflite）  
+9.手势
 
 
 
@@ -25,7 +26,7 @@ Flutter英文网：https://flutter.io
 Flutter中文网：https://flutterchina.club  
 Flutter社区：http://flutter-dev.cn/  
 Color API ：https://docs.flutter.io/flutter/material/Colors-class.html    
-第三方插件：https://pub.dartlang.org/         
+第三方插件搜索：https://pub.dartlang.org/         
 sqflite：https://pub.dartlang.org/packages/sqflite  
 shared_preferences：https://pub.dartlang.org/packages/shared_preferences  
 path_provider：https://pub.dartlang.org/packages/path_provider  

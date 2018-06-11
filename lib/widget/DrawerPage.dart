@@ -38,6 +38,14 @@ class _DrawerWeigetState extends State<DrawerWeiget> {
               Navigator.pushNamed(context, '/DataPage');
             }),
         new Divider(),
+        new ListTile(
+            title: new Text('Gesture 学习'),
+            trailing: new Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/GesturePage');
+            }),
+        new Divider(),
       ],
     );
   }
