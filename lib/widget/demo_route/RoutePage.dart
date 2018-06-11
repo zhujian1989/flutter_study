@@ -77,16 +77,44 @@ class _RouteAppPageState extends State<RouteAppPage> {
       body: new Center(
         child: new ListView(
           children: <Widget>[
-            new RaisedButton(
-                child: new Text('路由测试1-MaterialPageRoute'),
-                onPressed: _onPressed1),
-            new RaisedButton(
-                child: new Text('路由测试2-showDialog'), onPressed: _onPresse2),
-            new RaisedButton(
-                child: new Text('路由测试3-传递参数'), onPressed: _onPresse3),
-            new RaisedButton(
-                child: new Text('路由测试4-带返回值'), onPressed: _onPresse4),
-            new Text('参数： $_result'),
+            new Padding(
+              padding: const EdgeInsets.only(
+                  left: 10.0, top: 10.0, right: 10.0),
+              child: new RaisedButton(
+                  child: new Text('路由测试1-MaterialPageRoute'),
+                  onPressed: _onPressed1),
+            ),
+
+            new Padding(
+              padding: const EdgeInsets.only(
+                  left: 10.0, top: 10.0, right: 10.0),
+              child: new RaisedButton(
+                  child: new Text('路由测试2-showDialog'), onPressed: _onPresse2),
+            ),
+
+            new Padding(
+              padding: const EdgeInsets.only(
+                  left: 10.0, top: 10.0, right: 10.0),
+              child:
+              new RaisedButton(
+                  child: new Text('路由测试3-传递参数'), onPressed: _onPresse3),
+            ),
+
+            new Padding(
+              padding: const EdgeInsets.only(
+                  left: 10.0, top: 10.0, right: 10.0),
+              child:
+              new RaisedButton(
+                  child: new Text('路由测试4-带返回值'), onPressed: _onPresse4),
+            ),
+            new Padding(
+              padding: const EdgeInsets.only(
+                  left: 10.0, top: 10.0, right: 10.0),
+              child:
+              new Text('参数： $_result'),
+
+            ),
+
           ],
         ),
       ),

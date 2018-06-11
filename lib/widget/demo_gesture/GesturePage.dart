@@ -17,7 +17,38 @@ class _GestureAppPageState extends State<GestureAppPage> {
         title: new Text('Gesture 学习'),
         centerTitle: true,
       ),
-      body: new Text('GestureAppPage'),
+      body: new Center(
+        child: new GestureDetector(
+          child: new Text('手势测试'),
+          onHorizontalDragStart: (dragStart) {
+            print(dragStart.globalPosition);
+          },
+          onHorizontalDragUpdate: (dragUpdate) {
+            print(dragUpdate.globalPosition);
+          },
+
+          onHorizontalDragDown: (dragDown) {
+            print(dragDown.globalPosition);
+          },
+
+          onHorizontalDragEnd: (dragEnd) {
+          },
+
+          onHorizontalDragCancel: () {
+            print('onHorizontalDragCancel');
+          },
+//          onTapUp: (tapUpDetails) {
+//            print(tapUpDetails.globalPosition);
+//          },
+//          onTapDown: (tapDownDetails) {
+//            print(tapDownDetails .globalPosition);
+//          },
+//          onTapCancel: () {
+//            print('onTapCancel');
+//          },
+
+        ),
+      ),
     );
   }
 }
