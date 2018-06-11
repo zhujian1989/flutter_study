@@ -4,6 +4,10 @@
 该项目完全开源，单纯为了学习与交流，希望大家喜欢，多多提意见。
 后续会将未来学到的新知识点用到该项目，持续更新
 
+
+<img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/1.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/2.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/3.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/4.png" width="200">
+
+
 ## 知识点
 1.基础布局  
 2.数据请求  
