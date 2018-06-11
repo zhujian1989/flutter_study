@@ -7,15 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a523a76-0bfc-4dca-82ae-75304c3ab0c3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/screenshot/1.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/screenshot/2.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/screenshot/3.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/screenshot/4.png" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/screenshot/1.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/screenshot/2.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/screenshot/3.jpeg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/screenshot/4.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/screenshot/1.png" afterPath="$PROJECT_DIR$/screenshot/1.png" />
+      <change beforePath="$PROJECT_DIR$/screenshot/2.png" afterPath="$PROJECT_DIR$/screenshot/2.png" />
+      <change beforePath="$PROJECT_DIR$/screenshot/3.png" afterPath="$PROJECT_DIR$/screenshot/3.png" />
+      <change beforePath="$PROJECT_DIR$/screenshot/4.png" afterPath="$PROJECT_DIR$/screenshot/4.png" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -361,7 +356,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -383,7 +377,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22103004" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22103004" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
