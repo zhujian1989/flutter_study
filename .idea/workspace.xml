@@ -24,22 +24,44 @@
   <component name="DartProblemsView" auto-scroll-to-source="true" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DataPage.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataPage.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/widget/demo_database/DataPage.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="634">
-              <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
+            <state relative-caret-position="321">
+              <caret line="209" column="27" lean-forward="true" selection-start-line="209" selection-start-column="27" selection-end-line="209" selection-end-column="34" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
                 <element signature="e#501#1682#0" expanded="false" />
                 <element signature="e#1901#4503#0" expanded="false" />
                 <element signature="e#4557#4663#0" expanded="false" />
-                <element signature="e#4738#5863#0" expanded="false" />
-                <element signature="e#5967#6017#0" expanded="false" />
-                <element signature="e#6090#9639#0" expanded="false" />
-                <element signature="e#9683#10572#0" expanded="false" />
-                <element signature="e#10613#10763#0" expanded="false" />
+                <element signature="e#5968#6018#0" expanded="false" />
+                <element signature="e#6091#9640#0" expanded="false" />
+                <element signature="e#9684#10573#0" expanded="false" />
+                <element signature="e#10614#10764#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="442">
+                <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="15" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,8 +158,8 @@
         <option value="$PROJECT_DIR$/ios/Runner/Info.plist" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/../flutter/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-0.4.2/lib/shared_preferences.dart" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lib/widget/demo_database/DataPage.dart" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -188,6 +210,13 @@
               <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="widget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
+              <item name="demo_database" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -804,17 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="321">
-            <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -825,19 +843,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/widget/demo_database/DataPage.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="634">
-          <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
+        <state relative-caret-position="321">
+          <caret line="209" column="27" lean-forward="true" selection-start-line="209" selection-start-column="27" selection-end-line="209" selection-end-column="34" />
           <folding>
             <element signature="e#0#17#0" expanded="true" />
             <element signature="e#501#1682#0" expanded="false" />
             <element signature="e#1901#4503#0" expanded="false" />
             <element signature="e#4557#4663#0" expanded="false" />
-            <element signature="e#4738#5863#0" expanded="false" />
-            <element signature="e#5967#6017#0" expanded="false" />
-            <element signature="e#6090#9639#0" expanded="false" />
-            <element signature="e#9683#10572#0" expanded="false" />
-            <element signature="e#10613#10763#0" expanded="false" />
+            <element signature="e#5968#6018#0" expanded="false" />
+            <element signature="e#6091#9640#0" expanded="false" />
+            <element signature="e#9684#10573#0" expanded="false" />
+            <element signature="e#10614#10764#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="442">
+            <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

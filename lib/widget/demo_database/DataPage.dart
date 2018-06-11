@@ -207,7 +207,7 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
       children: <Widget>[
         new Padding(
           padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
-          child: new Text('SQLite用法'),
+          child: new Text('sqflite用法'),
         ),
         new Row(
           children: <Widget>[
