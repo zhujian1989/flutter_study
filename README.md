@@ -5,7 +5,7 @@
 后续会将未来学到的新知识点用到该项目，持续更新
 
 
-<img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/1.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/2.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/4.jpeg" width="200">
+<img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/1.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/2.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/3.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/tree/master/screenshot/4.png" width="200">
 
 
 ## 知识点
