@@ -12,7 +12,7 @@
 5.主题学习  
 6.路由  
 7.drawer    
-8.数据存储
+8.数据存储三种方式（文件，SharedPreference，SQLite）
 
 
 
@@ -21,7 +21,9 @@ Flutter英文网：https://flutter.io
 Flutter中文网：https://flutterchina.club  
 Flutter社区：http://flutter-dev.cn/  
 Color API ：https://docs.flutter.io/flutter/material/Colors-class.html
- 
-##插件
+第三方库搜索地址：https://pub.dartlang.org/  
+
+##第三方库搜集
 sqlite:https://pub.dartlang.org/packages/sqflite
 shared_preferences:https://pub.dartlang.org/packages/shared_preferences
+path_provider:https://pub.dartlang.org/packages/path_provider

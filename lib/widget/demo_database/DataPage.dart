@@ -104,7 +104,12 @@ class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
   _delete() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
-    prefs.clear();
+    //KEY
+    prefs.remove(USERNAME);
+    prefs.remove(PWD);
+
+    //清空所有KEY
+    //prefs.clear();
 
     setState(() {
       _result = '_delete 成功, 请点击查验证结果';
@@ -250,6 +255,25 @@ class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
   var _result;
 
   _add() async {
+    if (username.isEmpty || pwd.isEmpty) {
+      setState(() {
+        showDialog<Null>(
+          context: context,
+          child: new AlertDialog(
+              content: new Text('用户名和密码不能为空'),
+              actions: <Widget>[
+                new FlatButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: new Text('确定'))
+              ]),
+        );
+      });
+
+      return;
+    }
+
     File file = new File('$tempPath/user.txt');
     await file.writeAsString('用户名:$username\n密码:$pwd');
     setState(() {
