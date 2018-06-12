@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/widget/CommonItem.dart';
-class iOSAppPage extends StatefulWidget{
+class IOSAppPage extends StatefulWidget{
 
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return new _iOSAppPageState();
+    return new _IOSAppPageState();
   }
 
 }
 
-class _iOSAppPageState extends State<iOSAppPage> {
+class _IOSAppPageState extends State<IOSAppPage> {
 
 
   @override
@@ -35,7 +35,7 @@ class TabiOSPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-      body: new iOSAppPage(),
+      body: new IOSAppPage(),
     );
   }
 }
