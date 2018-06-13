@@ -11,6 +11,8 @@ dependencies:
   shared_preferences: ^0.4.2
   path_provider: ^0.4.1
   sqflite: ^0.9.0
+  cached_network_image: ^0.4.1+1
+  transparent_image: ^0.1.0
 
 dev_dependencies:
   flutter_test:
@@ -31,8 +33,10 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
+  assets:
+    - images/ic_android_black_48dp.png
+    - images/ic_assignment_ind_36pt.png
+
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

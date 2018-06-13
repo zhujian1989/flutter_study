@@ -5,7 +5,7 @@
 后续会将未来学到的新知识点用到该项目，持续更新
 
 
-<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/2.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/5.jpeg" width="200">
+<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/2.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/5.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/6.jpeg" width="200">
 
 ## 知识点
 1.基础布局  
@@ -17,7 +17,7 @@
 7.drawer    
 8.数据存储三种方式（文件，SharedPreference，sqflite）  
 9.手势
-
+9.图片加载
 
 
 ## 推荐学习资源
@@ -29,3 +29,5 @@ Color API ：https://docs.flutter.io/flutter/material/Colors-class.html
 sqflite：https://pub.dartlang.org/packages/sqflite  
 shared_preferences：https://pub.dartlang.org/packages/shared_preferences  
 path_provider：https://pub.dartlang.org/packages/path_provider  
+cached_network_image：https://pub.dartlang.org/packages/cached_network_image  
+transparent_image：https://pub.dartlang.org/packages/transparent_image

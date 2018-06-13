@@ -46,6 +46,14 @@ class _DrawerWeigetState extends State<DrawerWeiget> {
               Navigator.pushNamed(context, '/GesturePage');
             }),
         new Divider(),
+        new ListTile(
+            title: new Text('加载图片 学习'),
+            trailing: new Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/LoadImgPage');
+            }),
+        new Divider(),
       ],
     );
   }
