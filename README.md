@@ -16,7 +16,7 @@
 6.路由  
 7.drawer    
 8.数据存储三种方式（文件，SharedPreference，sqflite）  
-9.手势
+9.手势  
 9.图片加载
 
 
