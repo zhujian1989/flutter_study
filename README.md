@@ -5,7 +5,7 @@
 后续会将未来学到的新知识点用到该项目，持续更新
 
 
-<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/2.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/5.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/6.jpeg" width="200">
+<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.png" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/2.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/5.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/6.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/7.jpeg" width="200">
 
 ## 知识点
 1.基础布局  

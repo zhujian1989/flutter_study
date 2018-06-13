@@ -7,23 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a523a76-0bfc-4dca-82ae-75304c3ab0c3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/2.0x/ic_assignment_ind_36pt.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/3.0x/ic_assignment_ind_36pt.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/ic_android_black_48dp.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/ic_assignment_ind_36pt.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/widget/demo_loadimg/LoadImgByLocPage.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/widget/demo_loadimg/LoadImgByNetPage.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/widget/demo_loadimg/LoadImgPage.dart" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/screenshot/6.jpeg" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/screenshot/7.jpeg" />
       <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/flutter_study.iml" afterPath="$PROJECT_DIR$/flutter_study.iml" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/DrawerPage.dart" afterPath="$PROJECT_DIR$/lib/widget/DrawerPage.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
-      <change beforePath="$PROJECT_DIR$/screenshot/2.jpeg" afterPath="$PROJECT_DIR$/screenshot/2.jpeg" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -940,8 +925,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <first_editor relative-caret-position="221">
+            <caret line="7" column="379" lean-forward="false" selection-start-line="7" selection-start-column="379" selection-end-line="7" selection-end-column="379" />
             <folding />
           </first_editor>
           <second_editor />
