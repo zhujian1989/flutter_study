@@ -6,6 +6,8 @@ import 'package:flutter_study/widget/demo_gesture/DismissedPage.dart';
 import 'package:flutter_study/widget/demo_route/RoutePage.dart';
 import 'package:flutter_study/widget/demo_route/RoutePageWithValue1.dart';
 import 'package:flutter_study/widget/demo_loadimg/LoadImgPage.dart';
+import 'package:flutter_study/widget/demo_lifecycle/LifecyclePage.dart';
+
 //import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
 void main() {
@@ -25,6 +27,7 @@ void main() {
       '/GesturePage': (BuildContext context) => new GesturePage(),
       '/DismissedPage': (BuildContext context) => new DismissedPage(),
       '/LoadImgPage': (BuildContext context) => new LoadImgPage(),
+      '/LifecyclePage': (BuildContext context) => new LifecyclePage(),
 
     },
       home: new HomePage()));

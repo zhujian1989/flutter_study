@@ -84,6 +84,7 @@ class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage> {
 }
 
 class ImageView extends StatelessWidget {
+
   final String imgUrl;
 
   final int loadWay;
@@ -92,6 +93,7 @@ class ImageView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     Widget widget = new Icon(Icons.error);
 
     switch (loadWay) {

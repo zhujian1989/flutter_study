@@ -23,6 +23,14 @@ class _DrawerWeigetState extends State<DrawerWeiget> {
           ),
         ),
         new ListTile(
+            title: new Text('lifecycle 学习'),
+            trailing: new Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/LifecyclePage');
+            }),
+        new Divider(),
+        new ListTile(
             title: new Text('Route 学习'),
             trailing: new Icon(Icons.arrow_right),
             onTap: () {
