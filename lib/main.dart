@@ -6,8 +6,13 @@ import 'package:flutter_study/widget/demo_gesture/DismissedPage.dart';
 import 'package:flutter_study/widget/demo_route/RoutePage.dart';
 import 'package:flutter_study/widget/demo_route/RoutePageWithValue1.dart';
 import 'package:flutter_study/widget/demo_loadimg/LoadImgPage.dart';
+//import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
-void main() => runApp(new MaterialApp(
+void main() {
+
+//  debugPaintSizeEnabled = true;      //打开视觉调试开关
+
+  runApp(new MaterialApp(
 //    theme: defaultTargetPlatform == TargetPlatform.iOS
 //        ? kiOSTheme
 //        : kAndroidTheme,
@@ -22,4 +27,5 @@ void main() => runApp(new MaterialApp(
       '/LoadImgPage': (BuildContext context) => new LoadImgPage(),
 
     },
-    home: new HomePage()));
+      home: new HomePage()));
+}

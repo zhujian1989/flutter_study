@@ -17,7 +17,7 @@
 7.drawer    
 8.数据存储三种方式（文件，SharedPreference，sqflite）  
 9.手势  
-9.图片加载
+10.图片加载
 
 
 ## 推荐学习资源

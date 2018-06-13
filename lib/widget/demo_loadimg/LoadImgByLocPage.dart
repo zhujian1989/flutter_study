@@ -15,18 +15,10 @@ class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage> {
     return new Scaffold(
       body: new ListView(
         children: <Widget>[
-          new ListTile(
-            leading: new Image.asset(
-              'images/ic_android_black_48dp.png',
-            ),
-            subtitle: new Text('加载images/ic_android_black_48dp.png'),
-          ),
+          new Image.asset('images/ic_assignment_ind_36pt.png'),
           new Divider(),
-          new ListTile(
-            leading: new Image.asset(
-              'images/ic_assignment_ind_36pt.png',
-            ),
-            subtitle: new Text('加载images/ic_assignment_ind_36pt.png'),
+          new Image(
+            image: new AssetImage('images/ic_assignment_ind_36pt.png'),
           ),
           new Divider(),
         ],
