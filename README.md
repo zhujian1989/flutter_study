@@ -22,15 +22,9 @@
 12.网络请求（dio，http，原生）
 
 
-## 推荐资源
-Flutter英文网：https://flutter.io  
-Flutter中文网：https://flutterchina.club  
-Flutter社区：http://flutter-dev.cn/  
 
 
-##第三方库
-
-   
+## 第三方库
 第三方库搜索：  
 https://pub.dartlang.org/         
 
@@ -46,3 +40,9 @@ transparent_image：https://pub.dartlang.org/packages/transparent_image
 网络请求  
 dio:https://pub.dartlang.org/packages/dio  
 http:https://pub.dartlang.org/packages/http
+
+
+## 推荐资源
+Flutter英文网：https://flutter.io  
+Flutter中文网：https://flutterchina.club  
+Flutter社区：http://flutter-dev.cn/  
