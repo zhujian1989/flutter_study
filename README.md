@@ -34,7 +34,7 @@ Flutter社区：http://flutter-dev.cn/
 第三方库搜索：  
 https://pub.dartlang.org/         
 
-持久化
+持久化  
 sqflite：https://pub.dartlang.org/packages/sqflite  
 shared_preferences：https://pub.dartlang.org/packages/shared_preferences  
 path_provider：https://pub.dartlang.org/packages/path_provider  
