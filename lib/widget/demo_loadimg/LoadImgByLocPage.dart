@@ -14,7 +14,7 @@ class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage> with Automati
   void initState() {
     // TODO: implement initState
     super.initState();
-    print('_LoadImgByLocAppPageState');
+    print('_LoadImgByLocAppPageState initState');
   }
 
   @override

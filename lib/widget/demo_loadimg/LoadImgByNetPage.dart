@@ -53,7 +53,7 @@ class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage> with Automati
   void initState() {
     // TODO: implement initState
     super.initState();
-    print('_LoadImgByNetAppPageState');
+    print('_LoadImgByNetAppPageState initState');
   }
 
   @override
