@@ -20,7 +20,7 @@ class LoadImgByNetAppPage extends StatefulWidget {
   }
 }
 
-class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage> {
+class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage> with AutomaticKeepAliveClientMixin {
   int curLoadWay = loadNormalImg;
 
   String curImageUrl = imgNormalUrl;
@@ -47,6 +47,13 @@ class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage> {
     curLoadWay = loadImgWithFade;
     curImageUrl = imgNormalUrl;
     setState(() {});
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print('_LoadImgByNetAppPageState');
   }
 
   @override
@@ -81,6 +88,10 @@ class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage> {
       ),
     );
   }
+
+  // TODO: implement wantKeepAlive
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class ImageView extends StatelessWidget {

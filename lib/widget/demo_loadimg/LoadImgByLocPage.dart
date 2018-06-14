@@ -8,7 +8,15 @@ class LoadImgByLocAppPage extends StatefulWidget {
   }
 }
 
-class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage> {
+class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage> with AutomaticKeepAliveClientMixin{
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    print('_LoadImgByLocAppPageState');
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -25,6 +33,10 @@ class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage> {
       ),
     );
   }
+
+  // TODO: implement wantKeepAlive
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class LoadImgByLocPage extends StatelessWidget {

@@ -32,6 +32,7 @@ class _LoadImgAppPageState extends State<LoadImgAppPage>
     super.dispose();
   }
 
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -48,7 +49,9 @@ class _LoadImgAppPageState extends State<LoadImgAppPage>
           }).toList(),
         ),
       ),
-      body: new TabBarView(controller: _tabController, children: [
+      body: new TabBarView(
+          controller: _tabController,
+        children: [
         new LoadImgByNetPage(),
         new LoadImgByLocPage(),
       ]),
