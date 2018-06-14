@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:io';
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/common/Constant.dart';
@@ -92,7 +91,7 @@ class _NetworkAppPageState extends State<NetworkAppPage> {
     var json;
 
     if (isDio) {
-      //不需要在jsonDecode
+      //如果是Dio则不需要jsonDecode
       json = body;
     } else {
       json = jsonDecode(body);
