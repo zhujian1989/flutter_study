@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage>
 
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('flutter study'),
+        title: new Text('Flutter study'),
         centerTitle: true,
       ), //头部的标题AppBar
       drawer: new Drawer(
