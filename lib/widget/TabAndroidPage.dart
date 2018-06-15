@@ -100,6 +100,7 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
       content = getProgressDialog();
     } else {
       content = new ListView.builder(
+        physics:AlwaysScrollableScrollPhysics(),
         controller: _scrollController,
         itemCount: datas.length,
         itemBuilder: buildItem,

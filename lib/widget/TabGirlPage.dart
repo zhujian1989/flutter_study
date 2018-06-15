@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_study/common/widget/ProgreessDialog.dart';
 import 'package:flutter_study/model/FLModel.dart';
 import 'package:flutter_study/mvp/presenter/FLPresenter.dart';
 import 'package:flutter_study/mvp/presenter/FLPresenterImpl.dart';
-import 'package:flutter_study/common/widget/ProgreessDialog.dart';
 
 final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
     new GlobalKey<RefreshIndicatorState>();
@@ -33,7 +33,6 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
   bool isSlideUp = false;
 
   void _scrollListener() {
-
     if (_scrollController.position.pixels ==
         _scrollController.position.maxScrollExtent) {
       setState(() {
@@ -96,6 +95,7 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
       content = getProgressDialog();
     } else {
       content = new ListView.builder(
+        physics:AlwaysScrollableScrollPhysics(),
         controller: _scrollController,
         itemCount: datas.length,
         itemBuilder: buildCard,
