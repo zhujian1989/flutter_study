@@ -1,9 +1,10 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_study/common/widget/ProgreessDialog.dart';
 import 'package:flutter_study/model/AIModel.dart';
 import 'package:flutter_study/mvp/presenter/AIPresenter.dart';
 import 'package:flutter_study/mvp/presenter/AIPresenterImpl.dart';
-import 'package:flutter_study/common/widget/ProgreessDialog.dart';
 
 final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
     new GlobalKey<RefreshIndicatorState>();
@@ -52,10 +53,7 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
 
     if (_scrollController.position.pixels ==
         _scrollController.position.maxScrollExtent) {
-      setState(() {
-        print('load');
         _loadData();
-      });
     }
   }
 

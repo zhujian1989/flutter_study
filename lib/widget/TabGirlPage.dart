@@ -35,10 +35,7 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
   void _scrollListener() {
     if (_scrollController.position.pixels ==
         _scrollController.position.maxScrollExtent) {
-      setState(() {
-        print('load');
         _loadData();
-      });
     }
   }
 
@@ -95,7 +92,8 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
       content = getProgressDialog();
     } else {
       content = new ListView.builder(
-        physics:AlwaysScrollableScrollPhysics(),
+        //设置physics属性总是可滚动
+        physics: AlwaysScrollableScrollPhysics(),
         controller: _scrollController,
         itemCount: datas.length,
         itemBuilder: buildCard,
