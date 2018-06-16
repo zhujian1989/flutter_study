@@ -7,7 +7,7 @@ class HotNewsModel {
   final List top_stories;
 
   const HotNewsModel({this.date, this.stories, this.top_stories});
-  
+
 }
 
 class HotNewsStoriesModel {
