@@ -13,6 +13,7 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
+    _initPage();
   }
 
   @override
@@ -37,7 +38,6 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    _initPage();
 
     return new Scaffold(
       appBar: new AppBar(

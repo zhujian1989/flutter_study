@@ -1,9 +1,11 @@
 import 'dart:convert';
 import 'dart:io';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_study/common/Constant.dart';
 import 'package:flutter_study/model/AIModel.dart';
+import 'package:flutter_study/model/HotNewsModel.dart';
 import 'package:http/http.dart' as http;
 
 class NetworkAppPage extends StatefulWidget {
@@ -20,6 +22,8 @@ class _NetworkAppPageState extends State<NetworkAppPage> {
 
   //使用系统的请求
   var httpClient = new HttpClient();
+
+  var dio_url = 'https://news-at.zhihu.com/api/4/news/latest';
   var url = Constant.baseUrl + 'Android/1/1';
 
   _loadData() async {
@@ -72,10 +76,11 @@ class _NetworkAppPageState extends State<NetworkAppPage> {
 
   _loadDataByDio() async {
     try {
-      Response response = await dio.get(url);
+      Response response = await dio.get(dio_url);
       if (response.statusCode == HttpStatus.OK) {
         _result = response.data.toString();
-        _decodeJson(response.data, true);
+        _decodeTest(response.data);
+//        _decodeJson(response.data, true);
       } else {
         _result = 'error code : ${response.statusCode}';
       }
@@ -86,6 +91,39 @@ class _NetworkAppPageState extends State<NetworkAppPage> {
 
     setState(() {});
   }
+
+
+  _decodeTest(var body) {
+
+
+    HotNewsModel model = body;
+
+    print(model.date);
+
+
+//    String date = body['date'];
+//
+//    List Stories = body['stories'];
+//
+//    List topStories = body['top_stories'];
+//
+//    List<HotNewsStoriesModel> storiesList = Stories.map((model) {
+//      return new HotNewsStoriesModel.fromJson(model);
+//    }).toList();
+//
+//
+//    List<HotNewsTopStoriesModel> topStoriesList = topStories.map((model) {
+//      return new HotNewsTopStoriesModel.fromJson(model);
+//    }).toList();
+
+//    HotNewsModel hotNewsModel = new HotNewsModel(
+//        date: date, stories: storiesList, top_stories: topStoriesList);
+
+//    print(topStoriesList.length);
+//    storiesList.forEach((model) => print('${model.images}:${model.id}:${model.title}:${model.type}'));
+
+  }
+
 
   _decodeJson(var body, bool isDio) {
     var json;
