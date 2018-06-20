@@ -1,6 +1,8 @@
+import 'dart:async';
 import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:flutter_study/util/DatabaseHelper.dart';
+import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sqflite/sqflite.dart';
@@ -71,7 +73,7 @@ class HandleSPDataWidget extends StatefulWidget {
 class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
   var _result;
 
-  _add() async {
+  _add(BuildContext context) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     if (username.isEmpty || pwd.isEmpty) {
@@ -158,7 +160,7 @@ class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
         new Row(
           children: <Widget>[
             new RaisedButton(
-                textColor: Colors.black, child: new Text('增'), onPressed: _add),
+                textColor: Colors.black, child: new Text('增'), onPressed: _add(context)),
             new RaisedButton(
                 textColor: Colors.black,
                 child: new Text('删'),
@@ -202,12 +204,28 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
 
   String sql_query = 'SELECT * FROM user_table';
 
-  var databaseHelper = new DatabaseHelper();
-
   var _result;
 
+  Future<String> _createNewDb(String dbName) async {
+    Directory documentsDirectory = await getApplicationDocumentsDirectory();
+    print(documentsDirectory);
+
+    String path = join(documentsDirectory.path, dbName);
+
+    if (await new Directory(dirname(path)).exists()) {
+      await deleteDatabase(path);
+    } else {
+      try {
+        await new Directory(dirname(path)).create(recursive: true);
+      } catch (e) {
+        print(e);
+      }
+    }
+    return path;
+  }
+
   _create() async {
-    dbPath = await databaseHelper.createNewDb(dbName);
+    dbPath = await _createNewDb(dbName);
     Database db = await openDatabase(dbPath);
 
     await db.execute(sql_createTable);
@@ -217,7 +235,7 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
     });
   }
 
-  _add() async {
+  _add(BuildContext context) async {
     if (username.isEmpty || pwd.isEmpty) {
       setState(() {
         showDialog<Null>(
@@ -314,7 +332,7 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
                 child: new Text('创建'),
                 onPressed: _create),
             new RaisedButton(
-                textColor: Colors.black, child: new Text('增'), onPressed: _add),
+                textColor: Colors.black, child: new Text('增'), onPressed: _add(context)),
             new RaisedButton(
                 textColor: Colors.black,
                 child: new Text('删'),
@@ -364,7 +382,7 @@ class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
 
   var _result;
 
-  _add() async {
+  _add(BuildContext context) async {
     if (username.isEmpty || pwd.isEmpty) {
       setState(() {
         showDialog<Null>(
@@ -462,7 +480,7 @@ class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
         new Row(
           children: <Widget>[
             new RaisedButton(
-                textColor: Colors.black, child: new Text('增'), onPressed: _add),
+                textColor: Colors.black, child: new Text('增'), onPressed: _add(context)),
             new RaisedButton(
                 textColor: Colors.black,
                 child: new Text('删'),
