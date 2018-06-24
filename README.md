@@ -38,6 +38,8 @@ transparent_image：https://pub.dartlang.org/packages/transparent_image
 dio:https://pub.dartlang.org/packages/dio  
 http:https://pub.dartlang.org/packages/http
 
+WebView  
+flutter_webview_plugin:https://pub.dartlang.org/packages/flutter_webview_plugin  
 
 ## 推荐资源
 Flutter英文网：https://flutter.io  

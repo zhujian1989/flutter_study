@@ -22,6 +22,10 @@ class GirlsAppPage extends StatefulWidget {
 }
 
 class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
+
+  final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
+  new GlobalKey<RefreshIndicatorState>();
+
   ScrollController _scrollController;
 
   List<FLModel> datas = [];

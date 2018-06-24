@@ -5,9 +5,9 @@ import 'package:flutter_study/common/widget/ProgreessDialog.dart';
 import 'package:flutter_study/model/AIModel.dart';
 import 'package:flutter_study/mvp/presenter/AIPresenter.dart';
 import 'package:flutter_study/mvp/presenter/AIPresenterImpl.dart';
+import 'package:flutter_study/util/RouteUtil.dart';
 
-final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
-    new GlobalKey<RefreshIndicatorState>();
+
 
 class AndroidAppPage extends StatefulWidget {
   AndroidAppPage({Key key}) : super(key: key);
@@ -22,6 +22,9 @@ class AndroidAppPage extends StatefulWidget {
 }
 
 class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
+
+  final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
+  new GlobalKey<RefreshIndicatorState>();
 
   ScrollController _scrollController;
 
@@ -117,6 +120,9 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
   Widget buildItem(BuildContext context, int index) {
     final AIModel item = datas[index];
     return new ListTile(
+      onTap: (){
+        RouteUtil.route2Web(context, item.desc, item.url);
+      },
       title: new Text(item.desc), //子item的标题
       trailing: new Icon(
         Icons.arrow_right,
