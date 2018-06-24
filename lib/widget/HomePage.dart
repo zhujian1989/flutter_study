@@ -13,7 +13,6 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _initPage();
   }
 
   @override
@@ -38,7 +37,7 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-
+    _initPage();
     return new Scaffold(
       appBar: new AppBar(
         title: new Text('Flutter study'),
@@ -60,6 +59,7 @@ class _HomePageState extends State<HomePage>
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
+            print('$_curIndex');
             _curIndex = index;
           });
         },
