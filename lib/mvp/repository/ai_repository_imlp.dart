@@ -2,9 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter_study/common/Constant.dart';
-import 'package:flutter_study/model/AIModel.dart';
-import 'package:flutter_study/mvp/repository/AIRepository.dart';
+import 'package:flutter_study/common/constant.dart';
+import 'package:flutter_study/model/ai_model.dart';
+import 'package:flutter_study/mvp/repository/ai_repository.dart';
 
 class AIRepositoryImlp implements AIRepository {
   @override

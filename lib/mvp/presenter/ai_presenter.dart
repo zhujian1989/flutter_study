@@ -1,5 +1,5 @@
-import 'package:flutter_study/model/AIModel.dart';
-import 'package:flutter_study/mvp/Mvp.dart';
+import 'package:flutter_study/model/ai_model.dart';
+import 'package:flutter_study/mvp/mvp.dart';
 
 
 abstract class AIPresenter implements IPresenter{

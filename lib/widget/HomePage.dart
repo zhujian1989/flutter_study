@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/widget/TabAndroidPage.dart';
-import 'package:flutter_study/widget/TabGirlPage.dart';
-import 'package:flutter_study/widget/TabiOSPage.dart';
-import 'package:flutter_study/widget/DrawerPage.dart';
+import 'package:flutter_study/widget/tab_android_page.dart';
+import 'package:flutter_study/widget/tab_girl_page.dart';
+import 'package:flutter_study/widget/tab_ios_page.dart';
+import 'package:flutter_study/widget/drawer_page.dart';
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => new _HomePageState();

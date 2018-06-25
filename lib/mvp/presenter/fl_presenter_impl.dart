@@ -1,6 +1,6 @@
-import 'package:flutter_study/mvp/presenter/FLPresenter.dart';
-import 'package:flutter_study/mvp/repository/FLRepositoryImlp.dart';
-import 'package:flutter_study/mvp/repository/FLRepository.dart';
+import 'package:flutter_study/mvp/presenter/fl_presenter.dart';
+import 'package:flutter_study/mvp/repository/fl_repository_imlp.dart';
+import 'package:flutter_study/mvp/repository/fl_repository.dart';
 
 class FLPresenterImpl implements FLPresenter {
   FLView _view;

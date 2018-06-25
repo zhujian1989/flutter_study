@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_study/common/widget/ProgreessDialog.dart';
-import 'package:flutter_study/model/AIModel.dart';
-import 'package:flutter_study/mvp/presenter/AIPresenter.dart';
-import 'package:flutter_study/mvp/presenter/AIPresenterImpl.dart';
-import 'package:flutter_study/util/RouteUtil.dart';
+import 'package:flutter_study/common/widget/progreess_dialog.dart';
+import 'package:flutter_study/model/ai_model.dart';
+import 'package:flutter_study/mvp/presenter/ai_presenter.dart';
+import 'package:flutter_study/mvp/presenter/ai_presenter_impl.dart';
+import 'package:flutter_study/util/routes_util.dart';
 
 
 

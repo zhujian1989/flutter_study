@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/widget/demo_loadimg/LoadImgByLocPage.dart';
-import 'package:flutter_study/widget/demo_loadimg/LoadImgByNetPage.dart';
+import 'package:flutter_study/widget/demo_loadimg/loadIm_by_loc_page.dart';
+import 'package:flutter_study/widget/demo_loadimg/loadImg_by_net_page.dart';
 
 const List<String> tabs = ['网络加载','本地加载'];
 

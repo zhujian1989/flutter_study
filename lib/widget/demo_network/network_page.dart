@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_study/common/Constant.dart';
-import 'package:flutter_study/model/AIModel.dart';
-import 'package:flutter_study/model/HotNewsModel.dart';
+import 'package:flutter_study/common/constant.dart';
+import 'package:flutter_study/model/ai_model.dart';
+import 'package:flutter_study/model/hot_news_model.dart';
 import 'package:http/http.dart' as http;
 
 class NetworkAppPage extends StatefulWidget {

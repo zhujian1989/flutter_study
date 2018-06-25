@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/widget/HomePage.dart';
-import 'package:flutter_study/widget/demo_database/DataPage.dart';
-import 'package:flutter_study/widget/demo_gesture/GesturePage.dart';
-import 'package:flutter_study/widget/demo_gesture/DismissedPage.dart';
-import 'package:flutter_study/widget/demo_route/RoutePage.dart';
-import 'package:flutter_study/widget/demo_route/RoutePageWithValue1.dart';
-import 'package:flutter_study/widget/demo_loadimg/LoadImgPage.dart';
-import 'package:flutter_study/widget/demo_lifecycle/LifecyclePage.dart';
-import 'package:flutter_study/widget/demo_network/NetworkPage.dart';
+import 'package:flutter_study/widget/demo_database/data_page.dart';
+import 'package:flutter_study/widget/demo_gesture/gesture_page.dart';
+import 'package:flutter_study/widget/demo_gesture/dismissed_page.dart';
+import 'package:flutter_study/widget/demo_route/route_page.dart';
+import 'package:flutter_study/widget/demo_route/route_page_with_value_one.dart';
+import 'package:flutter_study/widget/demo_loadimg/loadImg_page.dart';
+import 'package:flutter_study/widget/demo_lifecycle/lifecycle_page.dart';
+import 'package:flutter_study/widget/demo_network/network_page.dart';
 
 //import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 

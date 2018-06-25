@@ -1,7 +1,7 @@
 
 
 import 'dart:async';
-import 'package:flutter_study/model/FLModel.dart';
+import 'package:flutter_study/model/fl_model.dart';
 
 
 abstract class FLRepository{

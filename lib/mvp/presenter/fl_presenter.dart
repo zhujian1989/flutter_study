@@ -1,5 +1,5 @@
-import 'package:flutter_study/model/FLModel.dart';
-import 'package:flutter_study/mvp/Mvp.dart';
+import 'package:flutter_study/model/fl_model.dart';
+import 'package:flutter_study/mvp/mvp.dart';
 
 
 abstract class FLPresenter implements IPresenter{

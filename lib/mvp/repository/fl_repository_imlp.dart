@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'package:flutter_study/model/FLModel.dart';
+import 'package:flutter_study/model/fl_model.dart';
 import 'dart:convert';
 import 'dart:io';
-import 'package:flutter_study/common/Constant.dart';
-import 'package:flutter_study/mvp/repository/FLRepository.dart';
+import 'package:flutter_study/common/constant.dart';
+import 'package:flutter_study/mvp/repository/fl_repository.dart';
 //分类数据: http://gank.io/api/data/数据类型/请求个数/第几页
 //数据类型： 福利 | Android | iOS | 休息视频 | 拓展资源 | 前端 | all
 //请求个数： 数字，大于0

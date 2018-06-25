@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/common/widget/CommonWebView.dart';
-import 'package:flutter_study/util/FixUrlUtil.dart';
+import 'package:flutter_study/common/widget/common_webview.dart';
+import 'package:flutter_study/util/fix_url_util.dart';
 
 class RouteUtil {
   static route2Web(BuildContext context, String title, String url) {

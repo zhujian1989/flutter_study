@@ -1,60 +1,63 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_study/common/widget/ProgreessDialog.dart';
-import 'package:flutter_study/model/FLModel.dart';
-import 'package:flutter_study/mvp/presenter/FLPresenter.dart';
-import 'package:flutter_study/mvp/presenter/FLPresenterImpl.dart';
+import 'package:flutter_study/common/widget/progreess_dialog.dart';
+import 'package:flutter_study/model/ai_model.dart';
+import 'package:flutter_study/mvp/presenter/ai_presenter.dart';
+import 'package:flutter_study/mvp/presenter/ai_presenter_impl.dart';
+import 'package:flutter_study/util/routes_util.dart';
+import 'package:flutter_study/widget/common_item.dart';
 
-final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
-    new GlobalKey<RefreshIndicatorState>();
-
-class GirlsAppPage extends StatefulWidget {
-  GirlsAppPage({Key key}) : super(key: key);
+class IOSAppPage extends StatefulWidget {
 
   @override
-  _GirlsAppPageState createState() {
-    _GirlsAppPageState view = new _GirlsAppPageState();
-    FLPresenter presenter = new FLPresenterImpl(view);
+  State<StatefulWidget> createState() {
+    _IOSAppPageState view = new _IOSAppPageState();
+    AIPresenter presenter = new AIPresenterImpl(view);
     presenter.init();
-    return view;
+    return  view;
   }
+
 }
 
-class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
+class _IOSAppPageState extends State<IOSAppPage> implements AIView {
 
   final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
   new GlobalKey<RefreshIndicatorState>();
 
   ScrollController _scrollController;
 
-  List<FLModel> datas = [];
+  List<AIModel> datas = [];
 
-  FLPresenter _flPresenter;
+  AIPresenter _alPresenter;
 
   int curPageNum = 1;
 
   bool isSlideUp = false;
 
-  void _scrollListener() {
-    if (_scrollController.position.pixels ==
-        _scrollController.position.maxScrollExtent) {
-        _loadData();
-    }
-  }
-
   @override
   void initState() {
     super.initState();
+    _scrollController = new ScrollController()
+      ..addListener(_scrollListener);
     _refreshData();
-    _scrollController = new ScrollController()..addListener(_scrollListener);
   }
+
 
   @override
   void dispose() {
-    super.dispose();
     _scrollController.removeListener(_scrollListener);
+    super.dispose();
   }
+
+
+  void _scrollListener() {
+    if (_scrollController.position.pixels ==
+        _scrollController.position.maxScrollExtent) {
+      _loadData();
+    }
+  }
+
 
   Future<Null> _refreshData() {
     isSlideUp = false;
@@ -63,7 +66,7 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
 
     curPageNum = 1;
 
-    _flPresenter.loadFLData(curPageNum, 10);
+    _alPresenter.loadAIData("iOS", curPageNum, 10);
 
     setState(() {});
 
@@ -79,7 +82,7 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
 
     curPageNum = curPageNum + 1;
 
-    _flPresenter.loadFLData(curPageNum, 10);
+    _alPresenter.loadAIData("Android", curPageNum, 10);
 
     setState(() {});
 
@@ -96,11 +99,10 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
       content = getProgressDialog();
     } else {
       content = new ListView.builder(
-        //设置physics属性总是可滚动
         physics: AlwaysScrollableScrollPhysics(),
         controller: _scrollController,
         itemCount: datas.length,
-        itemBuilder: buildCard,
+        itemBuilder: buildItem,
       );
     }
 
@@ -113,10 +115,16 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
     return _refreshIndicator;
   }
 
-  Widget buildCard(BuildContext context, int index) {
-    final String item = datas[index].url;
-    return new Card(
-      child: new Image.network(item),
+  Widget buildItem(BuildContext context, int index) {
+    final AIModel item = datas[index];
+    return new ListTile(
+      onTap: (){
+        RouteUtil.route2Web(context, item.desc, item.url);
+      },
+      title: new Text(item.desc), //子item的标题
+      trailing: new Icon(
+        Icons.arrow_right,
+      ), //显示右侧的箭头，不显示则传null
     );
   }
 
@@ -126,7 +134,7 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
   }
 
   @override
-  void onloadFLSuc(List<FLModel> list) {
+  void onloadFLSuc(List<AIModel> list) {
     if (!mounted) return; //异步处理，防止报错
     setState(() {
       if (isSlideUp) {
@@ -138,18 +146,22 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
   }
 
   @override
-  setPresenter(FLPresenter presenter) {
+  setPresenter(AIPresenter presenter) {
     // TODO: implement setPresenter
-    _flPresenter = presenter;
+    _alPresenter = presenter;
   }
 }
 
-class TabGirlPage extends StatelessWidget {
+
+class TabiOSPage extends StatelessWidget {
+
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Scaffold(
-      body: new GirlsAppPage(),
+      body: new IOSAppPage(),
     );
   }
 }
+

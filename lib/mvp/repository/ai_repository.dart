@@ -1,7 +1,7 @@
 
 
 import 'dart:async';
-import 'package:flutter_study/model/AIModel.dart';
+import 'package:flutter_study/model/ai_model.dart';
 
 
 abstract class AIRepository{
