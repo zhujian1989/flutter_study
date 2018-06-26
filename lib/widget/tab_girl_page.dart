@@ -5,6 +5,7 @@ import 'package:flutter_study/common/widget/progreess_dialog.dart';
 import 'package:flutter_study/model/fl_model.dart';
 import 'package:flutter_study/mvp/presenter/fl_presenter.dart';
 import 'package:flutter_study/mvp/presenter/fl_presenter_impl.dart';
+import 'package:flutter_study/widget/demo_gesture/multi_touch_page.dart';
 
 final GlobalKey<RefreshIndicatorState> _refreshIndicatorKey =
     new GlobalKey<RefreshIndicatorState>();
@@ -113,10 +114,33 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
     return _refreshIndicator;
   }
 
+  void _goPhotoView(String url) {
+    Navigator.of(context).push(new PageRouteBuilder(
+        opaque: false,
+        pageBuilder: (BuildContext context, _, __) {
+          return new MultiTouchPage(url);
+        },
+        transitionsBuilder: (_, Animation<double> animation, __, Widget child) {
+          return new FadeTransition(
+            opacity: animation,
+            child: new RotationTransition(
+              turns: new Tween<double>(begin: 0.5, end: 1.0).animate(animation),
+              child: child,
+            ),
+          );
+        }));
+  }
+
+
   Widget buildCard(BuildContext context, int index) {
     final String item = datas[index].url;
-    return new Card(
-      child: new Image.network(item),
+    return new GestureDetector(
+      onTap: (){
+        _goPhotoView(item);
+      },
+      child: new Card(
+        child: new Image.network(item),
+      ),
     );
   }
 
