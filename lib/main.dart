@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/widget/demo_advance/advanced_page.dart';
+import 'package:flutter_study/widget/demo_advance/data_interaction_page.dart';
+import 'package:flutter_study/widget/demo_advance/inherited_widget_page.dart';
 import 'package:flutter_study/widget/home_page.dart';
 import 'package:flutter_study/widget/demo_database/data_page.dart';
 import 'package:flutter_study/widget/demo_gesture/gesture_page.dart';
@@ -30,6 +33,9 @@ void main() {
       '/LoadImgPage': (BuildContext context) => new LoadImgPage(),
       '/LifecyclePage': (BuildContext context) => new LifecyclePage(),
       '/NetworkPage': (BuildContext context) => new NetworkPage(),
+      '/ProblemPage': (BuildContext context) => new AdvancedPage(),
+      '/DataInteractionPage': (BuildContext context) => new DataInteractionPage(),
+      '/InheritedWidgetTestPage': (BuildContext context) => new InheritedWidgetTestContainer(),
 
     },
       home: new HomePage()));

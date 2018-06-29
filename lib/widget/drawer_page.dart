@@ -70,6 +70,14 @@ class _DrawerWeigetState extends State<DrawerWeiget> {
               Navigator.pushNamed(context, '/NetworkPage');
             }),
         new Divider(),
+        new ListTile(
+            title: new Text('进阶 学习'),
+            trailing: new Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/ProblemPage');
+            }),
+        new Divider(),
       ],
     );
   }

@@ -17,6 +17,7 @@ class CommonWebView extends StatefulWidget {
 
 class _CommonWebViewPageState extends State<CommonWebView> {
 
+
   @override
   Widget build(BuildContext context) {
     return new WebviewScaffold(
