@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/widget/demo_advance/advanced_page.dart';
 import 'package:flutter_study/widget/demo_advance/data_interaction_page.dart';
-import 'package:flutter_study/widget/demo_advance/inherited_widget_page.dart';
+import 'package:flutter_study/widget/demo_advance/inherited_w_page.dart';
 import 'package:flutter_study/widget/home_page.dart';
 import 'package:flutter_study/widget/demo_database/data_page.dart';
 import 'package:flutter_study/widget/demo_gesture/gesture_page.dart';
