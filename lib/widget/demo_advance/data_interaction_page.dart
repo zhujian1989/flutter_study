@@ -1,8 +1,8 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class DataInteractionPage extends StatelessWidget {
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,18 +30,26 @@ class TestAPage extends StatefulWidget {
 }
 
 class _TestAPageState extends State<TestAPage> {
-  int curCount = 0;
+
+  int _count;
+
+  @override
+  void initState() {
+    super.initState();
+    print('state');
+  }
 
   @override
   Widget build(BuildContext context) {
     return new Padding(
       padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
       child: new RaisedButton(
-          textColor: Colors.black,
-          child: new Text('+'),
-          onPressed: () {
-            curCount++;
-          }),
+          textColor: Colors.black, child: new Text('+'), onPressed: () {
+            _count++;
+            setState(() {
+
+            });
+      }),
     );
   }
 }
@@ -86,5 +94,3 @@ class _TestCPageState extends State<TestCPage> {
         ));
   }
 }
-
-

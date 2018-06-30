@@ -29,8 +29,24 @@ class _AdvancedAppPageState extends State<AdvancedAppPage> {
                 }),
           ),
 
-
-
+                 new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('GlobalKey使用'),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/GlobalKeyFromPage");
+                }),
+          ),
+//          new Padding(
+//            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+//            child: new RaisedButton(
+//                textColor: Colors.black,
+//                child: new Text('widgets之前的数据获取'),
+//                onPressed: () {
+//                  Navigator.pushNamed(context, "/DataInteractionPage");
+//                }),
+//          ),
 
         ],
       ),
