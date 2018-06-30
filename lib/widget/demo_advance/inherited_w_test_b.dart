@@ -10,12 +10,12 @@ class TestWidgetB extends StatelessWidget {
 
     final inheritedTestModel = inheritedContext.inheritedTestModel;
 
-    return new Padding(
+    return  new Padding(
       padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
       child: new RaisedButton(
           textColor: Colors.black,
-          child: new Text('-'),
-          onPressed: inheritedContext.reduce),
+          child: new Text('${inheritedTestModel.count}'),
+          onPressed: inheritedContext.increment),
     );
   }
 }
