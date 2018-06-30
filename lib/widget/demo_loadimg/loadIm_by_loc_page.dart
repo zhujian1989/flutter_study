@@ -8,7 +8,7 @@ class LoadImgByLocAppPage extends StatefulWidget {
   }
 }
 
-class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage> with AutomaticKeepAliveClientMixin{
+class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage>{
 
   @override
   void initState() {
@@ -22,6 +22,7 @@ class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage> with Automati
     // TODO: implement build
     return new Scaffold(
       body: new ListView(
+        key: new PageStorageKey(_LoadImgByLocAppPageState),
         children: <Widget>[
           new Image.asset('images/ic_assignment_ind_36pt.png'),
           new Divider(),
@@ -33,10 +34,7 @@ class _LoadImgByLocAppPageState extends State<LoadImgByLocAppPage> with Automati
       ),
     );
   }
-
-  // TODO: implement wantKeepAlive
-  @override
-  bool get wantKeepAlive => true;
+  
 }
 
 class LoadImgByLocPage extends StatelessWidget {

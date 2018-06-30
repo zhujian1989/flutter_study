@@ -20,7 +20,7 @@ class LoadImgByNetAppPage extends StatefulWidget {
   }
 }
 
-class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage> with AutomaticKeepAliveClientMixin {
+class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage>{
   int curLoadWay = loadNormalImg;
 
   String curImageUrl = imgNormalUrl;
@@ -61,6 +61,7 @@ class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage> with Automati
     // TODO: implement build
     return new Scaffold(
       body: new ListView(
+        key: new PageStorageKey(_LoadImgByNetAppPageState),
         children: <Widget>[
           new Padding(
             padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),

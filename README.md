@@ -21,8 +21,8 @@
 11.生命周期  
 12.网络请求（dio，http，原生)  
 13.多点触控  
-14.InheritedWidget
-
+14.InheritedWidget    
+15.TabBarView & TabBar ，切换的时候，每次都会执行initState。[已解决](https://www.jianshu.com/p/edb741ab5997)
 ## 第三方库
 第三方库搜索：  
 https://pub.dartlang.org/         
