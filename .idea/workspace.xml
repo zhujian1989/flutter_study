@@ -7,11 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a523a76-0bfc-4dca-82ae-75304c3ab0c3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_test_c.dart" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_page.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_test_a.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_test_a.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_test_b.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_test_b.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/data_interaction_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_advance/data_interaction_page.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -27,7 +23,27 @@
   <component name="DartProblemsView" auto-scroll-to-source="true" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="inherited_w_page.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_interaction_page.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/data_interaction_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1479">
+              <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="advanced_page.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/advanced_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" column="72" lean-forward="false" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inherited_w_page.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_page.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1084">
@@ -195,7 +211,6 @@
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/problem_page.dart" />
         <option value="$PROJECT_DIR$/lib/widget/drawer_page.dart" />
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/test_page.dart" />
-        <option value="$PROJECT_DIR$/lib/widget/demo_advance/data_interaction_page.dart" />
         <option value="$PROJECT_DIR$/lib/model/app_state.dart" />
         <option value="$PROJECT_DIR$/lib/model/inherrited_test_model.dart" />
         <option value="$PROJECT_DIR$/lib/model/inherited_test_model.dart" />
@@ -207,6 +222,7 @@
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_test_b.dart" />
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_test_a.dart" />
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/inherited_w_page.dart" />
+        <option value="$PROJECT_DIR$/lib/widget/demo_advance/data_interaction_page.dart" />
       </list>
     </option>
   </component>
@@ -845,14 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/advanced_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="27" column="72" lean-forward="false" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/widget/drawer_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1077">
@@ -867,19 +875,6 @@
           <caret line="37" column="92" lean-forward="false" selection-start-line="37" selection-start-column="92" selection-end-line="37" selection-end-column="92" />
           <folding>
             <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/data_interaction_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1989">
-          <caret line="117" column="40" lean-forward="false" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#19#0" expanded="false" />
-            <element signature="e#3474#4489#0" expanded="false" />
-            <element signature="e#4527#4820#0" expanded="false" />
-            <element signature="e#4863#5961#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -960,6 +955,22 @@
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/advanced_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="72" lean-forward="false" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/data_interaction_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="89" column="0" lean-forward="true" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
