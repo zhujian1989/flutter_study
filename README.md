@@ -24,6 +24,7 @@
 14.InheritedWidget    
 15.TabBarView & TabBar ，切换的时候，每次都会执行initState。[点击查看解决方案](https://www.jianshu.com/p/edb741ab5997)    
 16.GlobalKey(简单使用)  
+17.国际化  
 
 
 ## 第三方库

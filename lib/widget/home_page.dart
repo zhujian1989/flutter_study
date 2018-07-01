@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_study/widget/demo_localizations/localizations_study.dart';
 import 'package:flutter_study/widget/tab_android_page.dart';
 import 'package:flutter_study/widget/tab_girl_page.dart';
 import 'package:flutter_study/widget/tab_ios_page.dart';
@@ -10,6 +11,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
+
+  final _key = new GlobalKey<ScaffoldState>();
   @override
   void initState() {
     super.initState();
@@ -39,8 +42,10 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     _initPage();
     return new Scaffold(
+      key: _key,
       appBar: new AppBar(
-        title: new Text('Flutter study'),
+        title: new Text(StudyLocalizations.of(context)
+            .appTitle),
         centerTitle: true,
       ), //头部的标题AppBar
       drawer: new Drawer(

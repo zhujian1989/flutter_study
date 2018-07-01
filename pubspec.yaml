@@ -17,6 +17,9 @@ dependencies:
   dio: ^0.0.14
   flutter_webview_plugin: ^0.1.6
 
+  flutter_localizations:
+    sdk: flutter
+
 dev_dependencies:
   flutter_test:
 
