@@ -38,11 +38,20 @@ class _AdvancedAppPageState extends State<AdvancedAppPage> {
                   Navigator.pushNamed(context, "/GlobalKeyFromPage");
                 }),
           ),
+          new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('Notification从下往上数据传递'),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/NotificationPage");
+                }),
+          ),
 //          new Padding(
 //            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
 //            child: new RaisedButton(
 //                textColor: Colors.black,
-//                child: new Text('widgets之前的数据获取'),
+//                child: new Text('widgets之间的数据交互'),
 //                onPressed: () {
 //                  Navigator.pushNamed(context, "/DataInteractionPage");
 //                }),

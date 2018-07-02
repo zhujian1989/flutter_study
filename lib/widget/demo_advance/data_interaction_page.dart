@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
 class DataInteractionPage extends StatelessWidget {
-
-
-
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('数据交互'),
+        title: new Text('测试'),
         centerTitle: true,
       ),
       body: new ListView(
@@ -44,12 +41,12 @@ class _TestAPageState extends State<TestAPage> {
     return new Padding(
       padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
       child: new RaisedButton(
-          textColor: Colors.black, child: new Text('+'), onPressed: () {
+          textColor: Colors.black,
+          child: new Text('+'),
+          onPressed: () {
             _count++;
-            setState(() {
-
-            });
-      }),
+            setState(() {});
+          }),
     );
   }
 }

@@ -90,9 +90,6 @@ class _LoadImgByNetAppPageState extends State<LoadImgByNetAppPage>{
     );
   }
 
-  // TODO: implement wantKeepAlive
-  @override
-  bool get wantKeepAlive => true;
 }
 
 class ImageView extends StatelessWidget {

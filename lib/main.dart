@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_study/widget/demo_advance/advanced_page.dart';
+import 'package:flutter_study/widget/demo_advance/notification_page.dart';
 import 'package:flutter_study/widget/demo_advance/data_interaction_page.dart';
 import 'package:flutter_study/widget/demo_advance/globalkey_form_page.dart';
 import 'package:flutter_study/widget/demo_advance/inherited_w_page.dart';
@@ -48,7 +49,7 @@ void main() {
         '/DataInteractionPage': (BuildContext context) => new DataInteractionPage(),
         '/InheritedWidgetTestPage': (BuildContext context) => new InheritedWidgetTestContainer(),
         '/GlobalKeyFromPage': (BuildContext context) => new GlobalKeyFromPage(),
-
+        '/NotificationPage': (BuildContext context) => new NotificationPage(),
       },
       home: new HomePage()));
 }
