@@ -73,27 +73,8 @@ class HandleSPDataWidget extends StatefulWidget {
 class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
   var _result;
 
-  _add(BuildContext context) async {
+  _add() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-
-    if (username.isEmpty || pwd.isEmpty) {
-      setState(() {
-        showDialog<Null>(
-          context: context,
-          child: new AlertDialog(
-              content: new Text('用户名和密码不能为空'),
-              actions: <Widget>[
-                new FlatButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: new Text('确定'))
-              ]),
-        );
-      });
-
-      return;
-    }
 
     prefs.setString(USERNAME, username);
 
@@ -157,10 +138,14 @@ class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
           padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
           child: new Text('shared_preferences用法'),
         ),
+
         new Row(
           children: <Widget>[
             new RaisedButton(
-                textColor: Colors.black, child: new Text('增'), onPressed: _add(context)),
+                textColor: Colors.black,
+                child: new Text('增'),
+                onPressed: _add
+            ),
             new RaisedButton(
                 textColor: Colors.black,
                 child: new Text('删'),
@@ -173,8 +158,7 @@ class _HandleSPDataWidgetState extends State<HandleSPDataWidget> {
                 textColor: Colors.black,
                 child: new Text('查'),
                 onPressed: _query),
-          ],
-        ),
+          ],),
         new Padding(
           padding: const EdgeInsets.only(top: 10.0, bottom: 10.0),
           child: new Text('结果：$_result'),
@@ -235,25 +219,8 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
     });
   }
 
-  _add(BuildContext context) async {
-    if (username.isEmpty || pwd.isEmpty) {
-      setState(() {
-        showDialog<Null>(
-          context: context,
-          child: new AlertDialog(
-              content: new Text('用户名和密码不能为空'),
-              actions: <Widget>[
-                new FlatButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: new Text('确定'))
-              ]),
-        );
-      });
+  _add() async {
 
-      return;
-    }
 
     Database db = await openDatabase(dbPath);
 
@@ -332,7 +299,7 @@ class _HandleSQLiteDataWidgetState extends State<HandleSQLiteDataWidget> {
                 child: new Text('创建'),
                 onPressed: _create),
             new RaisedButton(
-                textColor: Colors.black, child: new Text('增'), onPressed: _add(context)),
+                textColor: Colors.black, child: new Text('增'), onPressed: _add),
             new RaisedButton(
                 textColor: Colors.black,
                 child: new Text('删'),
@@ -382,25 +349,7 @@ class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
 
   var _result;
 
-  _add(BuildContext context) async {
-    if (username.isEmpty || pwd.isEmpty) {
-      setState(() {
-        showDialog<Null>(
-          context: context,
-          child: new AlertDialog(
-              content: new Text('用户名和密码不能为空'),
-              actions: <Widget>[
-                new FlatButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: new Text('确定'))
-              ]),
-        );
-      });
-
-      return;
-    }
+  _add() async {
 
     File file = new File('$tempPath/user.txt');
     await file.writeAsString('用户名:$username\n密码:$pwd');
@@ -480,7 +429,7 @@ class _HandleFileDataWidgetState extends State<HandleFileDataWidget> {
         new Row(
           children: <Widget>[
             new RaisedButton(
-                textColor: Colors.black, child: new Text('增'), onPressed: _add(context)),
+                textColor: Colors.black, child: new Text('增'), onPressed: _add),
             new RaisedButton(
                 textColor: Colors.black,
                 child: new Text('删'),
