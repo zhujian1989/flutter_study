@@ -41,6 +41,7 @@ class _IOSAppPageState extends State<IOSAppPage> implements AIView {
     _scrollController = new ScrollController()
       ..addListener(_scrollListener);
     _refreshData();
+    print("iOS");
   }
 
 

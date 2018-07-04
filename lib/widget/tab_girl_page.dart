@@ -49,6 +49,7 @@ class _GirlsAppPageState extends State<GirlsAppPage> implements FLView {
     super.initState();
     _refreshData();
     _scrollController = new ScrollController()..addListener(_scrollListener);
+    print("girl");
   }
 
   @override

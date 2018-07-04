@@ -64,7 +64,6 @@ class _HomePageState extends State<HomePage>
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
-            print('$_curIndex');
             _curIndex = index;
           });
         },

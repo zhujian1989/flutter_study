@@ -41,6 +41,7 @@ class _AndroidAppPageState extends State<AndroidAppPage> implements AIView {
     super.initState();
     _scrollController = new ScrollController()..addListener(_scrollListener);
     _refreshData();
+    print("android");
   }
 
 
