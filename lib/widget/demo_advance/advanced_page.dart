@@ -47,15 +47,15 @@ class _AdvancedAppPageState extends State<AdvancedAppPage> {
                   Navigator.pushNamed(context, "/NotificationPage");
                 }),
           ),
-//          new Padding(
-//            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
-//            child: new RaisedButton(
-//                textColor: Colors.black,
-//                child: new Text('widgets之间的数据交互'),
-//                onPressed: () {
-//                  Navigator.pushNamed(context, "/DataInteractionPage");
-//                }),
-//          ),
+          new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('widget显示与隐藏'),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/HideAndShowPage");
+                }),
+          ),
 
         ],
       ),

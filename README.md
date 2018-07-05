@@ -5,7 +5,7 @@
 后续会将未来学到的新知识点用到该项目，持续更新
 
 
-<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/2.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/5.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/6.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/8.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/9.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/10.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/11.jpeg" width="200">
+<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/2.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/5.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/6.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/8.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/9.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/10.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/11.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/12.jpeg" width="200">
 
 ## 知识点
 1.基础布局  
@@ -25,7 +25,8 @@
 15.TabBarView & TabBar ，切换的时候，每次都会执行initState。[点击查看解决方案](https://www.jianshu.com/p/edb741ab5997)    
 16.GlobalKey(简单使用)  
 17.国际化  
-18.Notification自下而上传递数据  
+18.Notification自下而上传递数据    
+19.显示/隐藏widget     
 
 
 
