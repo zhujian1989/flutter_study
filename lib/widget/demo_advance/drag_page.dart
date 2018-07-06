@@ -29,6 +29,10 @@ double appBarHeight = 0.0;
 
 double statusBarHeight = 0.0;
 
+double screenHeight = 0.0;
+
+double screenWidth = 0.0;
+
 class DragPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -49,7 +53,9 @@ class _DragPageState extends State<DragPage> {
 
     appBarHeight = appBar.preferredSize.height;
 
-    print(appBarHeight);
+    screenHeight = MediaQuery.of(context).size.height;
+
+    screenWidth = MediaQuery.of(context).size.width;
 
     return appBar;
   }
@@ -58,23 +64,25 @@ class _DragPageState extends State<DragPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: _buildAppbar(),
-      body: new Stack(
-        children: <Widget>[
-          new DragItem(new DragModel(Offset(0.0, 0.0), '红', Colors.red)),
-          new DragItem(new DragModel(
-              Offset(0.0, 1 * drag_item_height), '橙', Colors.orange)),
-          new DragItem(new DragModel(
-              Offset(0.0, 2 * drag_item_height), '黄', Colors.yellow)),
-          new DragItem(new DragModel(
-              Offset(0.0, 3 * drag_item_height), '绿', Colors.green)),
-          new DragItem(new DragModel(
-              Offset(0.0, 4 * drag_item_height), '青', Colors.indigoAccent)),
-          new DragItem(new DragModel(
-              Offset(0.0, 5 * drag_item_height), '蓝', Colors.blue)),
-          new DragItem(new DragModel(
-              Offset(0.0, 6 * drag_item_height), '紫', Colors.purple)),
-          new DragDestination(),
-        ],
+      body: new Container(
+        child: new Stack(
+          children: <Widget>[
+            new DragItem(new DragModel(Offset(0.0, 0.0), '红', Colors.red)),
+            new DragItem(new DragModel(
+                Offset(0.0, 1 * drag_item_height), '橙', Colors.orange)),
+            new DragItem(new DragModel(
+                Offset(0.0, 2 * drag_item_height), '黄', Colors.yellow)),
+            new DragItem(new DragModel(
+                Offset(0.0, 3 * drag_item_height), '绿', Colors.green)),
+            new DragItem(new DragModel(
+                Offset(0.0, 4 * drag_item_height), '青', Colors.indigoAccent)),
+            new DragItem(new DragModel(
+                Offset(0.0, 5 * drag_item_height), '蓝', Colors.blue)),
+            new DragItem(new DragModel(
+                Offset(0.0, 6 * drag_item_height), '紫', Colors.purple)),
+            new DragDestination(),
+          ],
+        ),
       ),
     );
   }
@@ -204,9 +212,32 @@ class _DragItemState extends State<DragItem> {
             if (!mounted) return;
             setState(() {
               //坐标是根据全屏算的，需要计算appbar和statusBar的高度
-              print('dx:${offset.dx}  dy:${offset.dy}  ');
-              pos = new Offset(
-                  offset.dx, offset.dy - appBarHeight - statusBarHeight);
+
+              double dx = offset.dx;
+              double dy = offset.dy - appBarHeight - statusBarHeight;
+
+              //临界点判断
+              if (dx < 0) {
+                dx = 0.0;
+              }
+
+              if (dx > screenWidth - drag_item_height) {
+                dx = screenWidth - drag_item_height;
+              }
+
+              if (dy < 0) {
+                dy = 0.0;
+              }
+
+              if (offset.dy + drag_item_height > screenHeight) {
+                dy = screenHeight -
+                    drag_item_height -
+                    appBarHeight -
+                    statusBarHeight;
+              }
+
+              pos = new Offset(dx, dy);
+
             });
           },
           feedback: Container(
