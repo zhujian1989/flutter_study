@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_study/widget/demo_advance/advanced_page.dart';
 import 'package:flutter_study/widget/demo_advance/notification_page.dart';
+import 'package:flutter_study/widget/demo_advance/streams_page.dart';
+import 'package:flutter_study/widget/demo_advance/drag_page.dart';
 import 'package:flutter_study/widget/demo_advance/hide_and_show_page.dart';
 import 'package:flutter_study/widget/demo_advance/globalkey_form_page.dart';
 import 'package:flutter_study/widget/demo_advance/inherited_w_page.dart';
@@ -50,6 +52,8 @@ void main() {
         '/GlobalKeyFromPage': (BuildContext context) => new GlobalKeyFromPage(),
         '/NotificationPage': (BuildContext context) => new NotificationPage(),
         '/HideAndShowPage': (BuildContext context) => new HideAndShowPage(),
+        '/StreamPage': (BuildContext context) => new StreamPage(),
+        '/DragPage': (BuildContext context) => new DragPage(),
 
       },
       home: new HomePage()));
