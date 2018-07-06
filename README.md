@@ -27,7 +27,7 @@
 17.国际化  
 18.Notification自下而上传递数据    
 19.显示/隐藏widget       
-19.drag     
+20.drag     
 
 
 
