@@ -31,13 +31,13 @@ class _ContainerPageState extends State<ContainerPage> {
                 //改变线的颜色
 //                border: Border.all(color: Colors.black),
                 //增加阴影
-                boxShadow: <BoxShadow>[
-                  BoxShadow(
-                    color: Colors.blue[100],
+//                boxShadow: <BoxShadow>[
+//                  BoxShadow(
+//                    color: Colors.blue[100],
 //                    offset: new Offset(0.0, 2.0),
-                    blurRadius: 5.0,
-                  )
-                ],
+//                    blurRadius: 5.0,
+//                  )
+//                ],
                 //Container形状
                 shape: BoxShape.circle,
               ),
