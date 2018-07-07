@@ -71,11 +71,19 @@ class _DrawerWeigetState extends State<DrawerWeiget> {
             }),
         new Divider(),
         new ListTile(
+            title: new Text('基础Widget 学习'),
+            trailing: new Icon(Icons.arrow_right),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.pushNamed(context, '/BaseWidgetPage');
+            }),
+        new Divider(),
+        new ListTile(
             title: new Text('进阶 学习'),
             trailing: new Icon(Icons.arrow_right),
             onTap: () {
               Navigator.of(context).pop();
-              Navigator.pushNamed(context, '/ProblemPage');
+              Navigator.pushNamed(context, '/AdvancedPage');
             }),
         new Divider(),
       ],

@@ -1,10 +1,40 @@
 PODS:
+  - Firebase/AdMob (5.0.1):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (= 7.30.0)
+  - Firebase/Core (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (= 5.0.0)
+  - Firebase/CoreOnly (5.0.1):
+    - FirebaseCore (= 5.0.1)
+  - firebase_admob (0.0.1):
+    - Firebase/AdMob
+    - Firebase/Core
+    - Flutter
+  - FirebaseAnalytics (5.0.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - nanopb (~> 0.3)
+  - FirebaseCore (5.0.1):
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+  - FirebaseInstanceID (3.0.0):
+    - FirebaseCore (~> 5.0)
   - Flutter (1.0.0)
   - flutter_webview_plugin (0.0.1):
     - Flutter
   - FMDB (2.7.2):
     - FMDB/standard (= 2.7.2)
   - FMDB/standard (2.7.2)
+  - Google-Mobile-Ads-SDK (7.30.0)
+  - GoogleToolboxForMac/Defines (2.1.4)
+  - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
+    - GoogleToolboxForMac/Defines (= 2.1.4)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
   - path_provider (0.0.1):
     - Flutter
   - shared_preferences (0.0.1):
@@ -14,6 +44,7 @@ PODS:
     - FMDB (~> 2.7.2)
 
 DEPENDENCIES:
+  - firebase_admob (from `.symlinks/plugins/firebase_admob/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
   - flutter_webview_plugin (from `.symlinks/plugins/flutter_webview_plugin/ios`)
   - path_provider (from `.symlinks/plugins/path_provider/ios`)
@@ -22,9 +53,18 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Firebase
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseInstanceID
     - FMDB
+    - Google-Mobile-Ads-SDK
+    - GoogleToolboxForMac
+    - nanopb
 
 EXTERNAL SOURCES:
+  firebase_admob:
+    :path: ".symlinks/plugins/firebase_admob/ios"
   Flutter:
     :path: ".symlinks/flutter/ios"
   flutter_webview_plugin:
@@ -37,9 +77,17 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/sqflite/ios"
 
 SPEC CHECKSUMS:
+  Firebase: d6861c2059d8c32d1e6dd8932e22ada346d90a3a
+  firebase_admob: b8cc46113ddf88a62fec340e9446607a5061a872
+  FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
+  FirebaseCore: cafc814b2d84fc8733f09e653041cc2165332ad7
+  FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
   flutter_webview_plugin: 116575b48572029304775b768e9f15ebfc316274
   FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
+  GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
+  nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   path_provider: 09407919825bfe3c2deae39453b7a5b44f467873
   shared_preferences: 5a1d487c427ee18fcd3ea1f2a131569481834b53
   sqflite: d1612813fa7db7c667bed9f1d1b508deffc56999

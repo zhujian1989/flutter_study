@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class AdvancedAppPage extends StatefulWidget {
+class AdvancedPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return new _AdvancedAppPageState();
+    return new _AdvancedPageState();
   }
 }
 
-class _AdvancedAppPageState extends State<AdvancedAppPage> {
+class _AdvancedPageState extends State<AdvancedPage> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -74,18 +74,27 @@ class _AdvancedAppPageState extends State<AdvancedAppPage> {
                   Navigator.pushNamed(context, "/DragPage");
                 }),
           ),
+          new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('Animation'),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/AnimationPage");
+                }),
+          ),
+          new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('admob'),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/AdmobPage");
+                }),
+          ),
         ],
       ),
     );
   }
 }
 
-class AdvancedPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return new Scaffold(
-      body: new AdvancedAppPage(),
-    );
-  }
-}
