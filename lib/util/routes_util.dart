@@ -11,7 +11,7 @@ class RouteUtil {
         opaque: false,
         pageBuilder: (BuildContext context, _, __) {
           print('$url');
-          return new CommonWebView(title, FixUrlUtil.getFixUrl(url));
+          return new CommonWebView(title, url);
         },
         transitionsBuilder: (_, Animation<double> animation, __, Widget child) {
           return new FadeTransition(
