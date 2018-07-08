@@ -5,7 +5,7 @@
 后续会将未来学到的新知识点用到该项目，持续更新
 
 
-<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/13.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/5.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/6.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/8.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/9.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/10.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/11.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/12.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/14.jpeg" width="200">
+<img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/1.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/13.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/3.jpeg" width="200"> <img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/4.png" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/5.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/6.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/8.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/9.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/10.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/11.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/12.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/14.jpeg" width="200"><img src="https://github.com/zhujian1989/flutter_study/blob/master/screenshot/15.jpeg" width="200">
 
 ## 知识点
 1.基础布局  
@@ -27,7 +27,8 @@
 17.国际化  
 18.Notification自下而上传递数据    
 19.显示/隐藏widget       
-20.drag     
+20.drag   
+21.Animation      
 
 
 
