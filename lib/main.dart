@@ -57,6 +57,5 @@ void main() {
     '/ContainerPage': (BuildContext context) => new ContainerPage(),
     '/BaseWidgetPage': (BuildContext context) => new BaseWidgetPage(),
     '/AnimationPage': (BuildContext context) => new AnimationPage(),
-    '/AdmobPage': (BuildContext context) => new AdmobPage(),
   }, home: new HomePage()));
 }
