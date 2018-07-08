@@ -237,7 +237,6 @@ class _DragItemState extends State<DragItem> {
               }
 
               pos = new Offset(dx, dy);
-
             });
           },
           feedback: Container(
