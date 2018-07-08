@@ -801,7 +801,7 @@ class _StaggeredAniWidgetState extends State<StaggeredAniWidget>
       ),
     );
 
-    radius = radius = BorderRadiusTween(
+    radius = BorderRadiusTween(
       begin: BorderRadius.circular(0.0),
       end: BorderRadius.circular(100.0),
     ).animate(
