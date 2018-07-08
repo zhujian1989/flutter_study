@@ -780,7 +780,7 @@ class _StaggeredAniWidgetState extends State<StaggeredAniWidget>
       CurvedAnimation(
         parent: _controller,
         curve: Interval(
-          0.250,
+          0.2,
           0.375,
           curve: Curves.fastOutSlowIn,
         ),
