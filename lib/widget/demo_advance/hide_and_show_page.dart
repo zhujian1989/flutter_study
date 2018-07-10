@@ -24,7 +24,7 @@ class _HideAndShowPageState extends State<HideAndShowPage> {
             padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
             child: new RaisedButton(
                 textColor: Colors.black,
-                child: new Text(visible ? '隐藏B    显示A' : '隐藏A   显示B'),
+                child: new Text(visible ? '隐藏B  隐藏c  显示A ' : '隐藏A   显示c 显示B'),
                 onPressed: () {
                   visible = !visible;
                   setState(() {});
@@ -43,11 +43,19 @@ class _HideAndShowPageState extends State<HideAndShowPage> {
               ],
             ),
           ),
+          new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new TestCWidget(visible: visible),
+          ),
         ],
       ),
     );
   }
 }
+
+
+
+
 
 class TestAWidget extends StatelessWidget {
   final bool visible;
@@ -85,6 +93,29 @@ class TestBWidget extends StatelessWidget {
         height: 100.0,
         child: new Center(
           child: new Text('TestBWidget'),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+class TestCWidget extends StatelessWidget {
+  final bool visible;
+
+  const TestCWidget({Key key, this.visible}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return new Offstage(
+      offstage: visible,
+      child:new Container(
+        color: Colors.orange,
+        height: 100.0,
+        child: new Center(
+          child: new Text('TestCWidget'),
         ),
       ),
     );
