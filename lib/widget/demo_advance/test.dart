@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter_study/model/base_model.dart';
 import 'package:rxdart/rxdart.dart';
 
 Stream<int> timedCounter(Duration interval, [int maxCount]) {
@@ -103,11 +104,33 @@ main() {
 //  subject.stream.listen(print); // prints 1, 2, 3
 
 
-  new ConcatStream([
-    new Stream.fromIterable([1]),
-    new TimerStream(2, new Duration(days: 1)),
-    new Stream.fromIterable([3])
-  ])
-      .listen(print);
+//  new ConcatStream([
+//    new Stream.fromIterable([1]),
+//    new TimerStream(2, new Duration(days: 1)),
+//    new Stream.fromIterable([3])
+//  ])
+//      .listen(print);
+
+//
+//      BaseModel<int> model = new BaseModel<int>(error: false, results: 1);
+//
+//
+//      StreamController<BaseModel<int>> controller  = new StreamController<BaseModel<int>>();
+//
+//      controller.add(model);
+//
+//      controller.stream.transform(new DoStreamTransformer(onData: print,onDone: (){
+//
+//      }));
+//
+//
+//
+
+  new Observable(new Stream.fromIterable([1]))
+         .interval(new Duration(seconds: 10))
+         .flatMap((i) => new Observable.just(2))
+         .take(1)
+         .listen(print);
 
 }
+

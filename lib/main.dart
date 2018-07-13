@@ -11,6 +11,7 @@ import 'package:flutter_study/widget/demo_advance/notification_page.dart';
 import 'package:flutter_study/widget/demo_advance/streams_page.dart';
 import 'package:flutter_study/widget/demo_base_widget/base_widget_page.dart';
 import 'package:flutter_study/widget/demo_base_widget/container_page.dart';
+import 'package:flutter_study/widget/demo_bloc/search_page.dart';
 import 'package:flutter_study/widget/demo_database/data_page.dart';
 import 'package:flutter_study/widget/demo_gesture/dismissed_page.dart';
 import 'package:flutter_study/widget/demo_gesture/gesture_page.dart';
@@ -57,5 +58,7 @@ void main() {
     '/ContainerPage': (BuildContext context) => new ContainerPage(),
     '/BaseWidgetPage': (BuildContext context) => new BaseWidgetPage(),
     '/AnimationPage': (BuildContext context) => new AnimationPage(),
+    '/SearchPage': (BuildContext context) => new SearchPage(),
+
   }, home: new HomePage()));
 }
