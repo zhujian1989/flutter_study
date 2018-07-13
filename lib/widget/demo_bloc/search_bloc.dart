@@ -28,7 +28,7 @@ class SearchBloc {
             .results : null).asBroadcastStream();
 
     _log = new Observable(_query.stream).map((value) => '当前搜索关键字：$value');
-    
+
   }
 
   void dispose() {
