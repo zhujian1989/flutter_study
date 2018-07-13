@@ -29,7 +29,7 @@
 19.显示/隐藏widget       
 20.drag   
 21.Animation      
-22.bloc[Business Logic Component](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3)  
+22.[Business Logic Component](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3)  
 
 
 
