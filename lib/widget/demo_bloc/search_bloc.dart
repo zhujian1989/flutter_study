@@ -12,7 +12,7 @@ class SearchBloc {
   Stream<String> _log = Stream.empty();
 
   ReplaySubject<String> _query = ReplaySubject<String>();
-
+  
   Stream<String> get log => _log;
 
   Stream<List<SearchModel>> get results => _results;
@@ -27,8 +27,16 @@ class SearchBloc {
             .error && null != value.results && value.results.length > 0) ? value
             .results : null).asBroadcastStream();
 
-    _log = new Observable(_query.stream).map((value) => '当前搜索关键字：$value');
+    _log = new Observable(_query.stream).map((value) => '当前搜索关键字：$value').asBroadcastStream();
 
+//    _log = new Observable(_results).map((list) {
+//      if(null == list || list.isEmpty){
+//        return '无结果';
+//      }else{
+//        return '';
+//      }
+//    }
+//    ).asBroadcastStream();
   }
 
   void dispose() {
