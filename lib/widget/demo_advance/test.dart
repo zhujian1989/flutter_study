@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:flutter_study/model/base_model.dart';
+import 'package:flutter_study/model/search_model.dart';
 import 'package:rxdart/rxdart.dart';
 
 Stream<int> timedCounter(Duration interval, [int maxCount]) {
@@ -126,11 +126,6 @@ main() {
 //
 //
 
-  new Observable(new Stream.fromIterable([1]))
-         .interval(new Duration(seconds: 10))
-         .flatMap((i) => new Observable.just(2))
-         .take(1)
-         .listen(print);
 
 }
 

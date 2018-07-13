@@ -19,14 +19,17 @@ class SearchBloc {
 
   Sink<String> get query => _query;
 
+
   SearchBloc(this.api) {
 
     _results =
-        _query.distinct().asyncMap(api.getSearchResult).asBroadcastStream();
+        _query.distinct().asyncMap(api.getSearchResult).map((value) => (!value
+            .error && null != value.results && value.results.length > 0) ? value
+            .results : null).asBroadcastStream();
 
 
     _log = Observable(results)
-        .withLatestFrom(_query.stream, (_, query) => 'Results for $query')
+        .withLatestFrom(_query.stream, (_, query) => '当前搜索的关键字： $query')
         .asBroadcastStream();
   }
 

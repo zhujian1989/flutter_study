@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter_study/model/base_model.dart';
 import 'package:flutter_study/util/dio_factory.dart';
 
 class SearchModel {
@@ -25,8 +26,16 @@ class SearchApi {
   static const String _url =
       "http://gank.io/api/search/query/listview/category/{type}/count/10/page/1";
 
-  Future<List<SearchModel>> getSearchResult(String type) async {
+  Future<BaseModel<List<SearchModel>>> getSearchResult(String type) async {
+
+
+    if(type.isEmpty){
+      return null;
+    }
+
     Response response = await _dio.get(_url.replaceFirst('{type}', type));
+
+    BaseModel<List<SearchModel>> model = new BaseModel(error: true, results: null);
 
     List<SearchModel> list;
 
@@ -38,8 +47,11 @@ class SearchApi {
           return new SearchModel.fromJson(model);
         }).toList();
       }
+      model = new BaseModel(error: error, results: list);
     }
 
-    return list;
+    print(model.results.length);
+    return model;
   }
+
 }
