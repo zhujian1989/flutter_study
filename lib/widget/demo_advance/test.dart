@@ -111,21 +111,10 @@ main() {
 //  ])
 //      .listen(print);
 
-//
-//      BaseModel<int> model = new BaseModel<int>(error: false, results: 1);
-//
-//
-//      StreamController<BaseModel<int>> controller  = new StreamController<BaseModel<int>>();
-//
-//      controller.add(model);
-//
-//      controller.stream.transform(new DoStreamTransformer(onData: print,onDone: (){
-//
-//      }));
-//
-//
-//
 
+  new Observable.fromIterable([1, 2]).withLatestFrom(
+             new Observable.fromIterable([2, 3]), (a, b) => a + b)
+             .listen(print);
 
 }
 

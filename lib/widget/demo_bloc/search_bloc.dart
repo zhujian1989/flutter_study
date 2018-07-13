@@ -27,10 +27,8 @@ class SearchBloc {
             .error && null != value.results && value.results.length > 0) ? value
             .results : null).asBroadcastStream();
 
-
-    _log = Observable(results)
-        .withLatestFrom(_query.stream, (_, query) => '当前搜索的关键字： $query')
-        .asBroadcastStream();
+    _log = new Observable(_query.stream).map((value) => '当前搜索关键字：$value');
+    
   }
 
   void dispose() {
