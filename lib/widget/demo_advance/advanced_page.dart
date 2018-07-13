@@ -56,15 +56,15 @@ class _AdvancedPageState extends State<AdvancedPage> {
                   Navigator.pushNamed(context, "/HideAndShowPage");
                 }),
           ),
-//          new Padding(
-//            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
-//            child: new RaisedButton(
-//                textColor: Colors.black,
-//                child: new Text('stream'),
-//                onPressed: () {
-//                  Navigator.pushNamed(context, "/StreamPage");
-//                }),
-//          ),
+          new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('StreamController'),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/StreamPage");
+                }),
+          ),
           new Padding(
             padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
             child: new RaisedButton(
