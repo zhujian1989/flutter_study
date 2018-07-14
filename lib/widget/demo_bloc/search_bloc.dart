@@ -12,7 +12,7 @@ class SearchBloc {
   Stream<String> _log = Stream.empty();
 
   ReplaySubject<String> _query = ReplaySubject<String>();
-  
+
   Stream<String> get log => _log;
 
   Stream<List<SearchModel>> get results => _results;
