@@ -112,9 +112,26 @@ main() {
 //      .listen(print);
 
 
-  new Observable.fromIterable([1, 2]).withLatestFrom(
-             new Observable.fromIterable([2, 3]), (a, b) => a + b)
-             .listen(print);
+//  new Observable.fromIterable([1, 2]).withLatestFrom(
+//             new Observable.fromIterable([2, 3]), (a, b) => a + b)
+//             .listen(print);
 
+
+
+  var data = [1,2,3,4,5];
+  var stream = new Stream.fromIterable(data);
+  var broadcastStream = stream.asBroadcastStream();
+
+  broadcastStream
+      .any((value) => value < 5)
+      .then((result) => print("Any less than 5?: $result")); // true
+
+  broadcastStream
+      .every((value) => value < 5)
+      .then((result) => print("All less than 5?: $result")); // false
+
+  broadcastStream
+      .contains(4)
+      .then((result) => print("Contains 4?: $result")); // true
 }
 
