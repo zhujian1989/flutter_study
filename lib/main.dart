@@ -59,6 +59,6 @@ void main() {
     '/BaseWidgetPage': (BuildContext context) => new BaseWidgetPage(),
     '/AnimationPage': (BuildContext context) => new AnimationPage(),
     '/SearchPage': (BuildContext context) => new SearchPage(),
-
+    '/HomePage': (BuildContext context) => new HomePage(),
   }, home: new HomePage()));
 }
