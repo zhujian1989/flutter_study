@@ -32,7 +32,12 @@
 21.Animation  
 22.StreamController            
 23.[Business Logic Component](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3)  
-
+  
+  
+##  部分问题记录  
+1.[SnackBar弹不出怎么办](https://www.jianshu.com/p/6520e0173049)  
+2.[如何监听实体返回键和AppBar返回键](https://www.jianshu.com/p/f9f496652807)  
+3.[刘海和状态栏没有填充当前主题颜色怎么办](https://www.jianshu.com/p/90cd38aeee65)  
 
 
 ## 第三方库
