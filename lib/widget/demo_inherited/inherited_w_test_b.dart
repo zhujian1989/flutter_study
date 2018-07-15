@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_study/widget/demo_advance/inherited_w_page.dart';
+import 'package:flutter_study/widget/demo_inherited/inherited_w_page.dart';
 
 
 class TestWidgetB extends StatelessWidget {

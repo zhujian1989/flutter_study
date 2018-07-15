@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/model/inherited_test_model.dart';
-import 'package:flutter_study/widget/demo_advance/inherited_w_test_a.dart';
-import 'package:flutter_study/widget/demo_advance/inherited_w_test_b.dart';
-import 'package:flutter_study/widget/demo_advance/inherited_w_test_c.dart';
+import 'package:flutter_study/widget/demo_inherited/inherited_w_test_a.dart';
+import 'package:flutter_study/widget/demo_inherited/inherited_w_test_b.dart';
+import 'package:flutter_study/widget/demo_inherited/inherited_w_test_c.dart';
 
 class InheritedContext extends InheritedWidget {
 
