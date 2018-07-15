@@ -6,7 +6,6 @@ import 'package:flutter_study/model/ai_model.dart';
 import 'package:flutter_study/mvp/presenter/ai_presenter.dart';
 import 'package:flutter_study/mvp/presenter/ai_presenter_impl.dart';
 import 'package:flutter_study/util/routes_util.dart';
-import 'package:flutter_study/widget/common_item.dart';
 
 class IOSAppPage extends StatefulWidget {
 
