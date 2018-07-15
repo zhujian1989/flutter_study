@@ -7,8 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a523a76-0bfc-4dca-82ae-75304c3ab0c3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" afterPath="$PROJECT_DIR$/lib/main.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/admob_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_admob/admob_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/advanced_page.dart" afterPath="$PROJECT_DIR$/lib/widget/advanced_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/animation_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_animation/animation_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/drag_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_gesture/drag_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/globalkey_form_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_key/globalkey_form_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/hide_and_show_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_common/hide_and_show_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/notification_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_notification/notification_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/streams_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_stream/streams_page.dart" />
+      <change beforePath="$PROJECT_DIR$/lib/widget/demo_advance/test.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_common/test.dart" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -32,7 +40,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="globalkey_form_page.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/globalkey_form_page.dart">
+        <entry file="file://$PROJECT_DIR$/lib/widget/demo_key/globalkey_form_page.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="373">
               <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="88" selection-end-column="54" />
@@ -42,7 +50,7 @@
         </entry>
       </file>
       <file leaf-file-name="hide_and_show_page.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/hide_and_show_page.dart">
+        <entry file="file://$PROJECT_DIR$/lib/widget/demo_common/hide_and_show_page.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="344">
               <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
@@ -53,15 +61,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="217">
-                <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-                <folding />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="streams_page.dart" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/widget/demo_stream/streams_page.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/main.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-334">
+              <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="58" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -163,7 +178,6 @@
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/test.dart" />
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/admob_page.dart" />
         <option value="$PROJECT_DIR$/lib/widget/demo_route/route_page_with_value.dart" />
-        <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/widget/demo_route/route_page_with_value_one.dart" />
         <option value="$PROJECT_DIR$/lib/widget/tab_ios_page.dart" />
         <option value="$PROJECT_DIR$/lib/widget/demo_inherited/inherited_w_page.dart" />
@@ -172,6 +186,7 @@
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/globalkey_form_page.dart" />
         <option value="$PROJECT_DIR$/lib/widget/demo_advance/hide_and_show_page.dart" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
       </list>
     </option>
   </component>
@@ -212,55 +227,6 @@
               <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
               <item name="widget" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_advance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_base_widget" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_bloc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_gesture" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_inherited" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_loadimg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
-              <item name="flutter_study" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="widget" type="462c0819:PsiDirectoryNode" />
-              <item name="demo_route" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="flutter_study" type="b2602c69:ProjectViewProjectNode" />
@@ -317,11 +283,11 @@
       <recent name="$PROJECT_DIR$/lib" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/widget/demo_inherited" />
-      <recent name="$PROJECT_DIR$/lib/widget/demo_base_widget" />
-      <recent name="$PROJECT_DIR$/images/3.0x" />
-      <recent name="$PROJECT_DIR$/images/2.0x" />
-      <recent name="$PROJECT_DIR$/lib/util" />
+      <recent name="$PROJECT_DIR$/lib/widget" />
+      <recent name="$PROJECT_DIR$/lib/widget/demo_key" />
+      <recent name="$PROJECT_DIR$/lib/widget/demo_notification" />
+      <recent name="$PROJECT_DIR$/lib/widget/demo_stream" />
+      <recent name="$PROJECT_DIR$/lib/widget/demo_admob" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -376,7 +342,7 @@
       <option name="workingDirectory" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="streams_page.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/lib/widget/demo_advance/streams_page.dart" />
+      <option name="filePath" value="$PROJECT_DIR$/lib/widget/demo_stream/streams_page.dart" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
     </configuration>
     <configuration name="test.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" nameIsGenerated="true">
@@ -490,7 +456,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -507,12 +472,12 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37437811" sideWeight="0.48569384" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23134328" sideWeight="0.48569384" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49713877" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21530758" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22603719" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49570817" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -620,17 +585,17 @@
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/widget/demo_advance/hide_and_show_page.dart</url>
+          <url>file://$PROJECT_DIR$/lib/widget/demo_common/hide_and_show_page.dart</url>
           <line>98</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/widget/demo_advance/drag_page.dart</url>
+          <url>file://$PROJECT_DIR$/lib/widget/demo_gesture/drag_page.dart</url>
           <line>7</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/widget/demo_advance/drag_page.dart</url>
+          <url>file://$PROJECT_DIR$/lib/widget/demo_gesture/drag_page.dart</url>
           <line>218</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
@@ -640,7 +605,7 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/widget/demo_advance/drag_page.dart</url>
+          <url>file://$PROJECT_DIR$/lib/widget/demo_gesture/drag_page.dart</url>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
@@ -649,7 +614,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/line_stream.dart" />
     <entry file="file://$PROJECT_DIR$/lib/model/inherited_test_model.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -778,7 +742,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/admob_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_admob/admob_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="28" />
@@ -786,7 +750,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/advanced_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widget/advanced_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1054">
           <caret line="62" column="49" lean-forward="false" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="49" />
@@ -794,7 +758,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/test.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_common/test.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
           <caret line="126" column="44" lean-forward="false" selection-start-line="126" selection-start-column="40" selection-end-line="126" selection-end-column="44" />
@@ -854,14 +818,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/main.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="55" column="16" lean-forward="false" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../flutter/packages/flutter/lib/src/rendering/flex.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -886,7 +842,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/animation_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_animation/animation_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -896,7 +852,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/notification_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_notification/notification_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-734">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -906,7 +862,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/drag_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_gesture/drag_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
@@ -1010,14 +966,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/streams_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-293">
-          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/widget/demo_gesture/gesture_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
@@ -1026,7 +974,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/globalkey_form_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_key/globalkey_form_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="85" column="18" lean-forward="true" selection-start-line="85" selection-start-column="18" selection-end-line="88" selection-end-column="54" />
@@ -1042,7 +990,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_advance/hide_and_show_page.dart">
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_lifecycle/lifecycle_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="200">
+            <caret line="21" column="6" lean-forward="false" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_common/hide_and_show_page.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
           <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
@@ -1052,14 +1019,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="217">
-            <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_stream/streams_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-334">
+          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
