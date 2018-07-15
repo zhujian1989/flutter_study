@@ -10,9 +10,7 @@ class LifecycleAppPage extends StatefulWidget {
 class _LifecycleAppPageState extends State<LifecycleAppPage>
     with WidgetsBindingObserver {
   String str;
-
-  int count = 0;
-
+  
   _LifecycleAppPageState(this.str);
 
   @override
@@ -76,25 +74,12 @@ class _LifecycleAppPageState extends State<LifecycleAppPage>
         title: new Text('lifecycle 学习'),
         centerTitle: true,
       ),
-      body: new OrientationBuilder(
-        builder: (context, orientation) {
-          return new Center(
-            child: new Text(
-              '当前计数值：$count',
-              style: new TextStyle(
-                  color: orientation == Orientation.portrait
-                      ? Colors.blue
-                      : Colors.red),
-            ),
-          );
-        },
+      body: new Column(
+        children: <Widget>[
+          new Image.asset('images/lifecycle.png'),
+          new Text('查看日志打印的状态'),
+        ],
       ),
-      floatingActionButton: new FloatingActionButton(
-          child: new Text('click'),
-          onPressed: () {
-            count++;
-            setState(() {});
-          }),
     );
   }
 }
