@@ -28,7 +28,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('Bloc'),
+          title: new Text('BLoC'),
           centerTitle: true,
         ),
         body: new Column(

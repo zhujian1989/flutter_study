@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_study/widget/architecture_page.dart';
 import 'package:flutter_study/widget/demo_admob/admob_page.dart';
 import 'package:flutter_study/widget/advanced_page.dart';
 import 'package:flutter_study/widget/demo_animation/animation_page.dart';
@@ -60,5 +61,6 @@ void main() {
     '/AnimationPage': (BuildContext context) => new AnimationPage(),
     '/SearchPage': (BuildContext context) => new SearchPage(),
     '/HomePage': (BuildContext context) => new HomePage(),
+    '/ArchitecturePage': (BuildContext context) => new ArchitecturePage(),
   }, home: new HomePage()));
 }
