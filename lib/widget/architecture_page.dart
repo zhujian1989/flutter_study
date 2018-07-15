@@ -25,7 +25,7 @@ class _ArchitecturePageState extends State<ArchitecturePage> {
                 textColor: Colors.black,
                 child: new Text('MVP(参考主页tab)'),
                 onPressed: () {
-                  Navigator.pushNamed(context, "/GlobalKeyFromPage");
+                  Navigator.of(context).pushReplacementNamed('/HomePage');
                 }),
           ),
           new Padding(
