@@ -32,9 +32,18 @@ class _ArchitecturePageState extends State<ArchitecturePage> {
             padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
             child: new RaisedButton(
                 textColor: Colors.black,
-                child: new Text('BLoC'),
+                child: new Text('Simple BLoC'),
                 onPressed: () {
                   Navigator.pushNamed(context, "/SearchPage");
+                }),
+          ),
+          new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('Simple Redux'),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/CountReduxPage");
                 }),
           ),
         ],

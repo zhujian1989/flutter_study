@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/model/search_model.dart';
-import 'package:flutter_study/widget/demo_bloc/search_bloc.dart';
+import 'package:flutter_study/widget/demo_simple_bloc/search_bloc.dart';
 
 class SearchPage extends StatefulWidget {
   @override
@@ -28,7 +28,7 @@ class _SearchPageState extends State<SearchPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text('BLoC'),
+          title: new Text('Simple BLoC'),
           centerTitle: true,
         ),
         body: new Column(

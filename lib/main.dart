@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_study/widget/architecture_page.dart';
-import 'package:flutter_study/widget/demo_admob/admob_page.dart';
 import 'package:flutter_study/widget/advanced_page.dart';
 import 'package:flutter_study/widget/demo_animation/animation_page.dart';
 import 'package:flutter_study/widget/demo_gesture/drag_page.dart';
@@ -9,10 +8,11 @@ import 'package:flutter_study/widget/demo_key/globalkey_form_page.dart';
 import 'package:flutter_study/widget/demo_common/hide_and_show_page.dart';
 import 'package:flutter_study/widget/demo_inherited/inherited_w_page.dart';
 import 'package:flutter_study/widget/demo_notification/notification_page.dart';
+import 'package:flutter_study/widget/demo_simple_redux/count_redux_page.dart';
 import 'package:flutter_study/widget/demo_stream/streams_page.dart';
 import 'package:flutter_study/widget/demo_base_widget/base_widget_page.dart';
 import 'package:flutter_study/widget/demo_base_widget/container_page.dart';
-import 'package:flutter_study/widget/demo_bloc/search_page.dart';
+import 'package:flutter_study/widget/demo_simple_bloc/search_page.dart';
 import 'package:flutter_study/widget/demo_database/data_page.dart';
 import 'package:flutter_study/widget/demo_gesture/dismissed_page.dart';
 import 'package:flutter_study/widget/demo_gesture/gesture_page.dart';
@@ -61,6 +61,7 @@ void main() {
     '/AnimationPage': (BuildContext context) => new AnimationPage(),
     '/SearchPage': (BuildContext context) => new SearchPage(),
     '/HomePage': (BuildContext context) => new HomePage(),
+    '/CountReduxPage': (BuildContext context) => new CountReduxPage(),
     '/ArchitecturePage': (BuildContext context) => new ArchitecturePage(),
   }, home: new HomePage()));
 }

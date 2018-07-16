@@ -16,10 +16,10 @@ dependencies:
   http: ^0.11.3+16
   dio: ^0.0.14
   flutter_webview_plugin: ^0.1.6
+  flutter_redux: 0.5.2
+  rxdart: 0.18.1
 #  firebase_admob: ^0.5.5
-
 #  fluttertoast: ^2.0.3
-  rxdart: ^0.18.1
   flutter_localizations:
     sdk: flutter
 
