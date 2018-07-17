@@ -17,7 +17,7 @@ class TestWidgetC extends StatelessWidget {
       child: new RaisedButton(
           textColor: Colors.black,
           child: new Text('-'),
-          onPressed: inheritedContext.reduce),
+          onPressed: inheritedContext.decrement),
     );
   }
 }

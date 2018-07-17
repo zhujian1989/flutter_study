@@ -13,13 +13,13 @@ class InheritedContext extends InheritedWidget {
   final Function() increment;
 
   //点击-号的方法
-  final Function() reduce;
+  final Function() decrement;
 
   InheritedContext({
     Key key,
     @required this.inheritedTestModel,
     @required this.increment,
-    @required this.reduce,
+    @required this.decrement,
     @required Widget child,
   }) : super(key: key, child: child);
 
@@ -61,7 +61,7 @@ class _InheritedWidgetTestContainerState
     });
   }
 
-  _reduceCount() {
+  _decrementCount() {
     setState(() {
       inheritedTestModel = new InheritedTestModel(inheritedTestModel.count - 1);
     });
@@ -72,7 +72,7 @@ class _InheritedWidgetTestContainerState
     return new InheritedContext(
         inheritedTestModel: inheritedTestModel,
         increment: _incrementCount,
-        reduce: _reduceCount,
+        decrement: _decrementCount,
         child: new Scaffold(
           appBar: new AppBar(
             title: new Text('InheritedWidget'),

@@ -17,7 +17,7 @@ class TestWidgetC extends StatelessWidget {
               onPressed: callback),
         );
       }, converter: (store) {
-        return () => store.dispatch(Actions.Reduce);
+        return () => store.dispatch(Actions.Decrement);
       }),
     );
   }
