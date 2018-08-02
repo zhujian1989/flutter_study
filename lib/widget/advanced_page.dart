@@ -83,6 +83,15 @@ class _AdvancedPageState extends State<AdvancedPage> {
                   Navigator.pushNamed(context, "/AnimationPage");
                 }),
           ),
+          new Padding(
+            padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
+            child: new RaisedButton(
+                textColor: Colors.black,
+                child: new Text('native jump'),
+                onPressed: () {
+                  Navigator.pushNamed(context, "/NativeJumpPage");
+                }),
+          ),
         ],
       ),
     );
