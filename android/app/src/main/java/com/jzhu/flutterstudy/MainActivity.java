@@ -1,6 +1,7 @@
 package com.jzhu.flutterstudy;
 
 import android.os.Bundle;
+import com.jzhu.flutterstudy.plugin.FlutterPluginCounter;
 import com.jzhu.flutterstudy.plugin.FlutterPluginJumpToAct;
 import io.flutter.app.FlutterActivity;
 import io.flutter.plugin.common.PluginRegistry;
@@ -19,6 +20,7 @@ public class MainActivity extends FlutterActivity {
 
         FlutterPluginJumpToAct.registerWith(registrar.registrarFor(FlutterPluginJumpToAct.CHANNEL));
 
+        FlutterPluginCounter.registerWith(registrar.registrarFor(FlutterPluginCounter.CHANNEL));
     }
 
 

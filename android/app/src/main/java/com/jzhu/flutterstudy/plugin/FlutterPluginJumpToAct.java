@@ -10,7 +10,7 @@ import io.flutter.plugin.common.PluginRegistry;
 
 public class FlutterPluginJumpToAct implements MethodChannel.MethodCallHandler{
 
-    public static String CHANNEL = "com.jzhu.jumpPlugin";
+    public static String CHANNEL = "com.jzhu.jump/plugin";
 
     static MethodChannel channel;
 

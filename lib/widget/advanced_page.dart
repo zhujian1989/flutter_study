@@ -87,9 +87,9 @@ class _AdvancedPageState extends State<AdvancedPage> {
             padding: const EdgeInsets.only(left: 10.0, top: 10.0, right: 10.0),
             child: new RaisedButton(
                 textColor: Colors.black,
-                child: new Text('native jump'),
+                child: new Text('Channel (目前只在Android设备上学习)'),
                 onPressed: () {
-                  Navigator.pushNamed(context, "/NativeJumpPage");
+                  Navigator.pushNamed(context, "/ChannelPage");
                 }),
           ),
         ],

@@ -64,6 +64,6 @@ void main() {
     '/HomePage': (BuildContext context) => new HomePage(),
     '/CountReduxPage': (BuildContext context) => new CountReduxPage(),
     '/ArchitecturePage': (BuildContext context) => new ArchitecturePage(),
-    '/NativeJumpPage': (BuildContext context) => new NativeJumpPage(),
+    '/ChannelPage': (BuildContext context) => new ChannelPage(),
   }, home: new HomePage()));
 }

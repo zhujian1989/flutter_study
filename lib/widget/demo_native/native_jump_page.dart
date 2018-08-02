@@ -1,23 +1,54 @@
 import 'dart:async';
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class NativeJumpPage extends StatefulWidget {
+class ChannelPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _NativeJumpPageState();
+    return new _ChannelPageState();
   }
 }
 
-class _NativeJumpPageState extends State<NativeJumpPage> {
+class _ChannelPageState extends State<ChannelPage> {
 
   static const jumpPlugin = const MethodChannel('com.jzhu.jumpPlugin');
+
+  static const counterPlugin = const EventChannel('com.jzhu.counter/plugin');
+
+  StreamSubscription _subscription = null;
+
+  var _count;
 
   @override
   void initState() {
     super.initState();
+    if(_subscription == null){
+      _subscription =  counterPlugin.receiveBroadcastStream().listen(_onEvent,onError: _onError);
+    }
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    if(_subscription != null){
+      _subscription.cancel();
+    }
+  }
+
+  void _onEvent(Object event) {
+    setState(() {
+      _count = event;
+      print("_NativeJumpPageState:$event");
+    });
+  }
+
+  void _onError(Object error) {
+    setState(() {
+      _count = "计时器异常";
+      print(error);
+    });
+  }
+
 
 
   Future<Null> _jumpToNative() async {
@@ -41,7 +72,7 @@ class _NativeJumpPageState extends State<NativeJumpPage> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text("native jump"),
+        title: new Text("Channel"),
         centerTitle: true,
       ),
       body: new Center(
@@ -65,6 +96,11 @@ class _NativeJumpPageState extends State<NativeJumpPage> {
                     onPressed: () {
                       _jumpToNativeWithValue();
                     }),
+              ),
+              new Padding(
+                padding: const EdgeInsets.only(
+                    left: 10.0, top: 10.0, right: 10.0),
+                child: new Text('这是一个从原生发射过来的计时器：$_count'),
               ),
             ],
           )

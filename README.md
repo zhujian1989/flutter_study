@@ -26,7 +26,7 @@
 12.网络请求（dio，http，原生)  
 13.多点触控  
 14.InheritedWidget    
-15.TabBarView & TabBar ，切换的时候，每次都会执行initState。[点击查看解决方案](https://www.jianshu.com/p/edb741ab5997)    
+15.TabBarView & TabBar ，切换的时候，每次都会执行initState。
 16.GlobalKey(简单使用)  
 17.国际化  
 18.Notification自下而上传递数据    
@@ -35,8 +35,8 @@
 21.Animation  
 22.StreamController            
 23.[Business Logic Component](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3)  
-24.Simple Redux & Simple BLoC            
-  
+24.Simple Redux & Simple BLoC              
+25.Channel(目前使用Android设备学习)  
   
   
 ##  部分问题记录  
