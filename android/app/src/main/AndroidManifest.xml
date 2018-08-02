@@ -38,6 +38,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".AndroidActivity"/>
+        <activity android:name=".OneActivity"/>
+        <activity android:name=".TwoActivity"/>
     </application>
 </manifest>

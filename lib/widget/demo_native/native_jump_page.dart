@@ -1,10 +1,7 @@
 import 'dart:async';
-
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_study/common/widget/progreess_dialog.dart';
-import 'package:flutter_study/model/base_model.dart';
-import 'package:flutter_study/model/search_model.dart';
 
 class NativeJumpPage extends StatefulWidget {
   @override
@@ -15,16 +12,28 @@ class NativeJumpPage extends StatefulWidget {
 
 class _NativeJumpPageState extends State<NativeJumpPage> {
 
+  static const jumpPlugin = const MethodChannel('com.jzhu.jumpPlugin');
+
   @override
   void initState() {
     super.initState();
   }
 
 
-  _pressed(){
-    const jumpPlugin = const MethodChannel('com.jzhu.jumpPlugin');
+  Future<Null> _jumpToNative() async {
+    String result = await jumpPlugin.invokeMethod('oneAct');
 
-    jumpPlugin.invokeMethod('goAndroidActivity');
+    print(result);
+  }
+
+
+  Future<Null> _jumpToNativeWithValue() async {
+
+    Map<String, String> map = { "flutter": "这是一条来自flutter的参数" };
+
+    String result = await jumpPlugin.invokeMethod('twoAct', map);
+
+    print(result);
   }
 
 
@@ -44,7 +53,17 @@ class _NativeJumpPageState extends State<NativeJumpPage> {
                     textColor: Colors.black,
                     child: new Text('跳转到原生界面'),
                     onPressed: () {
-                      _pressed();
+                      _jumpToNative();
+                    }),
+              ),
+              new Padding(
+                padding: const EdgeInsets.only(
+                    left: 10.0, top: 10.0, right: 10.0),
+                child: new RaisedButton(
+                    textColor: Colors.black,
+                    child: new Text('跳转到原生界面(带参数)'),
+                    onPressed: () {
+                      _jumpToNativeWithValue();
                     }),
               ),
             ],
