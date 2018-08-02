@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class AndroidActivity extends Activity implements View.OnClickListener {
+public class OneActivity extends Activity implements View.OnClickListener {
 
     private Button mGoFlutterBtn;
 
@@ -15,7 +15,7 @@ public class AndroidActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_android);
+        setContentView(R.layout.activity_one);
 
         mGoFlutterBtn = findViewById(R.id.go_flutter);
 
