@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage>
         new FlatButton(
             onPressed: () {
               Navigator.pop(context);
-              Navigator.of(context).pop();
+              SystemNavigator.pop();
             },
             child: new Text('确定'))
       ]),
