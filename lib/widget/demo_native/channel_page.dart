@@ -11,7 +11,7 @@ class ChannelPage extends StatefulWidget {
 
 class _ChannelPageState extends State<ChannelPage> {
 
-  static const jumpPlugin = const MethodChannel('com.jzhu.jumpPlugin');
+  static const jumpPlugin = const MethodChannel('com.jzhu.jump/plugin');
 
   static const counterPlugin = const EventChannel('com.jzhu.counter/plugin');
 

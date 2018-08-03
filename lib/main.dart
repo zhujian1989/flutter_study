@@ -7,7 +7,7 @@ import 'package:flutter_study/widget/demo_gesture/drag_page.dart';
 import 'package:flutter_study/widget/demo_key/globalkey_form_page.dart';
 import 'package:flutter_study/widget/demo_common/hide_and_show_page.dart';
 import 'package:flutter_study/widget/demo_inherited/inherited_w_page.dart';
-import 'package:flutter_study/widget/demo_native/native_jump_page.dart';
+import 'package:flutter_study/widget/demo_native/channel_page.dart';
 import 'package:flutter_study/widget/demo_notification/notification_page.dart';
 import 'package:flutter_study/widget/demo_simple_redux/count_redux_page.dart';
 import 'package:flutter_study/widget/demo_stream/streams_page.dart';

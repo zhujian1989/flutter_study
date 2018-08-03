@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import io.flutter.plugin.common.EventChannel;
 
-public class OneActivity extends Activity implements View.OnClickListener {
+public class OneActivity extends Activity implements View.OnClickListener,EventChannel.StreamHandler {
 
     private Button mGoFlutterBtn;
+
+    private EventChannel.StreamHandler mStreamHandler;
 
 
     @Override
@@ -20,6 +23,7 @@ public class OneActivity extends Activity implements View.OnClickListener {
         mGoFlutterBtn = findViewById(R.id.go_flutter);
 
         mGoFlutterBtn.setOnClickListener(this);
+
     }
 
     @Override
@@ -30,5 +34,15 @@ public class OneActivity extends Activity implements View.OnClickListener {
                 startActivity(intent);
                 break;
         }
+    }
+
+    @Override
+    public void onListen(Object o, EventChannel.EventSink eventSink) {
+
+    }
+
+    @Override
+    public void onCancel(Object o) {
+
     }
 }
