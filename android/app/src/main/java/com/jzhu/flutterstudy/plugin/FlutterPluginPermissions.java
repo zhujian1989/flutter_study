@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.Settings;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 import io.flutter.plugin.common.MethodCall;
@@ -43,6 +44,14 @@ public class FlutterPluginPermissions implements MethodChannel.MethodCallHandler
     public void onMethodCall(MethodCall call, final MethodChannel.Result result) {
 
         if (call.method.equals("askPermissions")) {
+
+
+            //如果小于6。0的不需要判断权限
+            if(Build.VERSION.SDK_INT < Build.VERSION_CODES.M){
+                result.success(true);
+                return;
+            }
+
 
             List<String> list = (List<String>) call.arguments;
 

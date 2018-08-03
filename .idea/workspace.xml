@@ -12,19 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a523a76-0bfc-4dca-82ae-75304c3ab0c3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/android/.idea/runConfigurations.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/jzhu/flutterstudy/plugin/FlutterPluginAMap.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/jzhu/flutterstudy/plugin/FlutterPluginPermissions.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/android/building_system/jz.jks" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" afterPath="$PROJECT_DIR$/android/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/jzhu/flutterstudy/MainActivity.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/jzhu/flutterstudy/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/jzhu/flutterstudy/OneActivity.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/jzhu/flutterstudy/OneActivity.java" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" afterPath="$PROJECT_DIR$/android/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/demo_native/channel_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_native/channel_page.dart" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/com/jzhu/flutterstudy/plugin/FlutterPluginPermissions.java" afterPath="$PROJECT_DIR$/android/app/src/main/java/com/jzhu/flutterstudy/plugin/FlutterPluginPermissions.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -47,7 +35,7 @@
   <component name="DartProblemsView" auto-scroll-to-source="true" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="channel_page.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="channel_page.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/widget/demo_native/channel_page.dart">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-398">
@@ -77,7 +65,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -1048,22 +1036,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/widget/demo_native/channel_page.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-398">
-          <caret line="65" column="59" lean-forward="false" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pubspec.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1080,6 +1052,22 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/widget/demo_native/channel_page.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-398">
+          <caret line="65" column="59" lean-forward="false" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
