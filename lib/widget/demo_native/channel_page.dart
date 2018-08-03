@@ -11,6 +11,7 @@ class ChannelPage extends StatefulWidget {
 
 class _ChannelPageState extends State<ChannelPage> {
 
+  //获取到插件与原生的交互通道
   static const jumpPlugin = const MethodChannel('com.jzhu.jump/plugin');
 
   static const counterPlugin = const EventChannel('com.jzhu.counter/plugin');
@@ -22,6 +23,7 @@ class _ChannelPageState extends State<ChannelPage> {
   @override
   void initState() {
     super.initState();
+    //开启监听
     if(_subscription == null){
       _subscription =  counterPlugin.receiveBroadcastStream().listen(_onEvent,onError: _onError);
     }
@@ -30,6 +32,7 @@ class _ChannelPageState extends State<ChannelPage> {
   @override
   void dispose() {
     super.dispose();
+    //取消监听
     if(_subscription != null){
       _subscription.cancel();
     }
@@ -38,7 +41,7 @@ class _ChannelPageState extends State<ChannelPage> {
   void _onEvent(Object event) {
     setState(() {
       _count = event;
-      print("_NativeJumpPageState:$event");
+      print("ChannelPage: $event");
     });
   }
 
