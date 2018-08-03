@@ -2,6 +2,23 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+
+enum Permissions {
+  ACCESS_COARSE_LOCATION,
+  ACCESS_FINE_LOCATION,
+  ACCESS_NETWORK_STATE,
+  ACCESS_WIFI_STATE,
+  CHANGE_WIFI_STATE,
+  INTERNET,
+  READ_PHONE_STATE,
+  WRITE_EXTERNAL_STORAGE,
+  ACCESS_LOCATION_EXTRA_COMMANDS,
+  BLUETOOTH,
+  BLUETOOTH_ADMIN,
+}
+
+
+
 class ChannelPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -16,36 +33,135 @@ class _ChannelPageState extends State<ChannelPage> {
 
   static const counterPlugin = const EventChannel('com.jzhu.counter/plugin');
 
-  StreamSubscription _subscription = null;
+  static const amapLocPlugin = const EventChannel('com.jzhu.amap.loc/plugin');
+
+  static const perimissionsPlugin = const MethodChannel('com.jzhu.permisstions/plugin');
+
+  StreamSubscription _counterSub;
+
+  StreamSubscription _amapSub;
 
   var _count;
+
+  var _city;
+
 
   @override
   void initState() {
     super.initState();
-    //开启监听
-    if(_subscription == null){
-      _subscription =  counterPlugin.receiveBroadcastStream().listen(_onEvent,onError: _onError);
-    }
+    _startCounterPlugin();
   }
 
   @override
   void dispose() {
     super.dispose();
-    //取消监听
-    if(_subscription != null){
-      _subscription.cancel();
+    _endCounterPlugin();
+    _endAMapPlugin();
+  }
+
+
+  _showDialog() {
+    showDialog<Null>(
+      context: context,
+      child: new AlertDialog(content: new Text('是否前去设置未开通权限'), actions: <Widget>[
+        new FlatButton(
+            onPressed: () {
+              Navigator.pop(context);
+              _goSetting();
+            },
+            child: new Text('确定'))
+      ]),
+    );
+  }
+
+
+
+  Future<bool> _askPermission (List perimissions) async {
+
+    bool result = await perimissionsPlugin.invokeMethod('askPermissions', perimissions);
+
+    return result;
+    
+  }
+
+  Future<Null> _goSetting () async {
+
+    await perimissionsPlugin.invokeMethod('openSetting');
+
+    return null;
+  }
+
+  
+  void _startAMapPlugin(){
+    
+    List perimissions  = new List();
+    
+    perimissions.add("ACCESS_COARSE_LOCATION");
+    perimissions.add("ACCESS_FINE_LOCATION");
+    perimissions.add("READ_PHONE_STATE");
+    perimissions.add("WRITE_EXTERNAL_STORAGE");
+
+    _askPermission(perimissions).then((granted){
+      if(granted){
+        if(_amapSub == null){
+          _amapSub =  amapLocPlugin.receiveBroadcastStream().listen(_onAMapEvent,onError: _onAMapError);
+        }
+      }else{
+        _showDialog();
+      }
+
+    });
+    
+
+  }
+
+
+  void _endAMapPlugin(){
+    if(_amapSub != null){
+      _amapSub.cancel();
     }
   }
 
-  void _onEvent(Object event) {
+
+
+  void _onAMapEvent(Object event) {
+    Map<String, Object> loc = Map.castFrom(event);
+
     setState(() {
-      _count = event;
-      print("ChannelPage: $event");
+      _city = loc['city'];
+      print(event);
     });
   }
 
-  void _onError(Object error) {
+  void _onAMapError(Object error) {
+    setState(() {
+      _city = "定位异常";
+      print(error);
+    });
+  }
+
+
+
+  void _startCounterPlugin(){
+    if(_counterSub == null){
+      _counterSub =  counterPlugin.receiveBroadcastStream().listen(_onCounterEvent,onError: _onCounterError);
+    }
+  }
+
+  void _endCounterPlugin(){
+    if(_counterSub != null){
+      _counterSub.cancel();
+    }
+  }
+
+
+  void _onCounterEvent(Object event) {
+    setState(() {
+      _count = event;
+    });
+  }
+
+  void _onCounterError(Object error) {
     setState(() {
       _count = "计时器异常";
       print(error);
@@ -103,8 +219,34 @@ class _ChannelPageState extends State<ChannelPage> {
               new Padding(
                 padding: const EdgeInsets.only(
                     left: 10.0, top: 10.0, right: 10.0),
+                child: new RaisedButton(
+                    textColor: Colors.black,
+                    child: new Text('点击获取当前定位'),
+                    onPressed: () {
+                      _startAMapPlugin();
+                    }),
+              ),
+              new Padding(
+                padding: const EdgeInsets.only(
+                    left: 10.0, top: 10.0, right: 10.0),
+                child: new RaisedButton(
+                    textColor: Colors.black,
+                    child: new Text('停止接收获取当前定位'),
+                    onPressed: () {
+                      _endAMapPlugin();
+                    }),
+              ),
+              new Padding(
+                padding: const EdgeInsets.only(
+                    left: 10.0, top: 10.0, right: 10.0),
                 child: new Text('这是一个从原生发射过来的计时器：$_count'),
               ),
+              new Padding(
+                padding: const EdgeInsets.only(
+                    left: 10.0, top: 10.0, right: 10.0),
+                child: new Text('当前定位：$_city'),
+              ),
+
             ],
           )
       ),

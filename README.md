@@ -36,7 +36,7 @@
 22.StreamController            
 23.[Business Logic Component](https://medium.com/lacolaco-blog/bloc-design-pattern-with-angular-1c2f0339f6a3)  
 24.Simple Redux & Simple BLoC              
-25.Channel(目前使用Android设备学习)  
+25.Channel(目前使用Android设备学习，高德，权限)  
   
   
 ##  部分问题记录  
