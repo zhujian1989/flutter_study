@@ -2,23 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
-enum Permissions {
-  ACCESS_COARSE_LOCATION,
-  ACCESS_FINE_LOCATION,
-  ACCESS_NETWORK_STATE,
-  ACCESS_WIFI_STATE,
-  CHANGE_WIFI_STATE,
-  INTERNET,
-  READ_PHONE_STATE,
-  WRITE_EXTERNAL_STORAGE,
-  ACCESS_LOCATION_EXTRA_COMMANDS,
-  BLUETOOTH,
-  BLUETOOTH_ADMIN,
-}
-
-
-
 class ChannelPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
