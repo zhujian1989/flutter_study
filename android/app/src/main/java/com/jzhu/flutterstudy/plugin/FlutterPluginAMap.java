@@ -7,21 +7,17 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import io.flutter.plugin.common.EventChannel;
-import io.flutter.plugin.common.MethodCall;
-import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.PluginRegistry;
 
 import java.util.HashMap;
 
-public class FlutterPluginAMap implements MethodChannel.MethodCallHandler, EventChannel.StreamHandler {
+public class FlutterPluginAMap implements EventChannel.StreamHandler {
 
     public static String EVENT_CHANNEL = "com.jzhu.amap.loc/plugin";
 
     public static String METHOD_CHANNEL = "com.jzhu.amap.fun/plugin";
 
     private static EventChannel mEventChannel;
-
-    private static MethodChannel mMethodChannel;
 
     private Activity mActivity;
 
@@ -40,7 +36,7 @@ public class FlutterPluginAMap implements MethodChannel.MethodCallHandler, Event
         initAMap();
     }
 
-    public static void registerWithEventChannel(PluginRegistry.Registrar registrar) {
+    public static void registerWith(PluginRegistry.Registrar registrar) {
 
         if (null == instance) {
             instance = new FlutterPluginAMap(registrar.activity());
@@ -51,15 +47,6 @@ public class FlutterPluginAMap implements MethodChannel.MethodCallHandler, Event
 
     }
 
-    public static void registerWithMethodChannel(PluginRegistry.Registrar registrar) {
-
-        if (null == instance) {
-            instance = new FlutterPluginAMap(registrar.activity());
-        }
-
-        mMethodChannel = new MethodChannel(registrar.messenger(), METHOD_CHANNEL);
-        mMethodChannel.setMethodCallHandler(instance);
-    }
 
     private void initAMap() {
         mlocationClient = new AMapLocationClient(mActivity);
@@ -116,18 +103,4 @@ public class FlutterPluginAMap implements MethodChannel.MethodCallHandler, Event
 
     }
 
-    @Override
-    public void onMethodCall(MethodCall methodCall, MethodChannel.Result result) {
-        if (methodCall.method.equals("stop")) {
-
-            result.success("success");
-        }
-        else if (methodCall.method.equals("start")) {
-
-            result.success("success");
-        }
-        else {
-            result.notImplemented();
-        }
-    }
 }

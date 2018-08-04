@@ -26,9 +26,7 @@ public class MainActivity extends FlutterActivity {
 
         FlutterPluginPermissions.registerWith(registrar.registrarFor(FlutterPluginPermissions.CHANNEL));
 
-        FlutterPluginAMap.registerWithEventChannel(registrar.registrarFor(FlutterPluginAMap.EVENT_CHANNEL));
-
-        FlutterPluginAMap.registerWithMethodChannel(registrar.registrarFor(FlutterPluginAMap.METHOD_CHANNEL));
+        FlutterPluginAMap.registerWith(registrar.registrarFor(FlutterPluginAMap.EVENT_CHANNEL));
 
     }
 
