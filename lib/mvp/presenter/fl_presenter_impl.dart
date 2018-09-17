@@ -1,5 +1,5 @@
 import 'package:flutter_study/mvp/presenter/fl_presenter.dart';
-import 'package:flutter_study/mvp/repository/fl_repository_imlp.dart';
+import 'package:flutter_study/mvp/repository/fl_repository_impl.dart';
 import 'package:flutter_study/mvp/repository/fl_repository.dart';
 
 class FLPresenterImpl implements FLPresenter {
@@ -25,6 +25,6 @@ class FLPresenterImpl implements FLPresenter {
 
   @override
   init() {
-    _repository = new FLRepositoryImlp();
+    _repository = new FLRepositoryImpl();
   }
 }

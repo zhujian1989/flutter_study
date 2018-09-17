@@ -31,7 +31,7 @@ class _NetworkAppPageState extends State<NetworkAppPage> {
       var request = await httpClient.getUrl(Uri.parse(url));
       var response = await request.close();
       if (response.statusCode == HttpStatus.OK) {
-        _result = await response.transform(UTF8.decoder).join();
+        _result = await response.transform(Utf8Decoder()).join();
         _decodeJson(_result, false);
       } else {
         _result = 'error code : ${response.statusCode}';

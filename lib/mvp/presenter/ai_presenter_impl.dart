@@ -1,5 +1,5 @@
 import 'package:flutter_study/mvp/presenter/ai_presenter.dart';
-import 'package:flutter_study/mvp/repository/ai_repository_imlp.dart';
+import 'package:flutter_study/mvp/repository/ai_repository_impl.dart';
 import 'package:flutter_study/mvp/repository/ai_repository.dart';
 
 class AIPresenterImpl implements AIPresenter {
@@ -25,6 +25,6 @@ class AIPresenterImpl implements AIPresenter {
 
   @override
   init() {
-    _repository = new AIRepositoryImlp();
+    _repository = new AIRepositoryImpl();
   }
 }
