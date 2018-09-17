@@ -65,7 +65,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.1.1'
-    implementation 'com.amap.api:location:latest.integration'
+    implementation 'com.amap.api:location:4.2.0'
     implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar'
 //    implementation 'com.android.support:support-compat:27.1.1'
 //    implementation 'com.android.support:appcompat-v7:27.1.1'

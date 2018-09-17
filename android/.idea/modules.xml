@@ -3,6 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android.iml" filepath="$PROJECT_DIR$/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_webview_plugin-0.2.1+2/android/flutter_webview_plugin.iml" filepath="$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.flutter-io.cn/flutter_webview_plugin-0.2.1+2/android/flutter_webview_plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.flutter-io.cn/path_provider-0.4.1/android/path_provider.iml" filepath="$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.flutter-io.cn/path_provider-0.4.1/android/path_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-0.4.2/android/shared_preferences.iml" filepath="$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.flutter-io.cn/shared_preferences-0.4.2/android/shared_preferences.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.flutter-io.cn/sqflite-0.12.0/android/sqflite.iml" filepath="$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.flutter-io.cn/sqflite-0.12.0/android/sqflite.iml" />
     </modules>
   </component>
 </project>
