@@ -12,21 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a523a76-0bfc-4dca-82ae-75304c3ab0c3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/android/.idea/caches/build_file_checksums.ser" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/gradle.xml" afterPath="$PROJECT_DIR$/android/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/misc.xml" afterPath="$PROJECT_DIR$/android/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/android/.idea/modules.xml" afterPath="$PROJECT_DIR$/android/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" afterPath="$PROJECT_DIR$/android/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/lib/mvp/presenter/ai_presenter_impl.dart" afterPath="$PROJECT_DIR$/lib/mvp/presenter/ai_presenter_impl.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/mvp/presenter/fl_presenter_impl.dart" afterPath="$PROJECT_DIR$/lib/mvp/presenter/fl_presenter_impl.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/mvp/repository/ai_repository_imlp.dart" afterPath="$PROJECT_DIR$/lib/mvp/repository/ai_repository_impl.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/mvp/repository/fl_repository_imlp.dart" afterPath="$PROJECT_DIR$/lib/mvp/repository/fl_repository_impl.dart" />
-      <change beforePath="$PROJECT_DIR$/lib/widget/demo_network/network_page.dart" afterPath="$PROJECT_DIR$/lib/widget/demo_network/network_page.dart" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" afterPath="$PROJECT_DIR$/pubspec.lock" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" afterPath="$PROJECT_DIR$/pubspec.yaml" />
+      <change beforePath="$PROJECT_DIR$/lib/mvp/repository/ai_repository_imlp.dart" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/lib/mvp/repository/fl_repository_imlp.dart" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -479,7 +467,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
