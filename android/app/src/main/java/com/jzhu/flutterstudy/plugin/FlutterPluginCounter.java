@@ -20,7 +20,7 @@ public class FlutterPluginCounter implements EventChannel.StreamHandler {
 
     private Activity activity;
 
-    static BasicMessageChannel basicMessageChannel;
+//    static BasicMessageChannel basicMessageChannel;
 
     private FlutterPluginCounter(Activity activity) {
         this.activity = activity;
@@ -30,7 +30,7 @@ public class FlutterPluginCounter implements EventChannel.StreamHandler {
         channel = new EventChannel(registrar.messenger(), CHANNEL);
         FlutterPluginCounter instance = new FlutterPluginCounter(registrar.activity());
         channel.setStreamHandler(instance);
-        basicMessageChannel = new BasicMessageChannel<String> ("foo", StringCodec.INSTANCE);
+       // basicMessageChannel = new BasicMessageChannel<String> ("foo", StringCodec.INSTANCE);
     }
 
     @Override
