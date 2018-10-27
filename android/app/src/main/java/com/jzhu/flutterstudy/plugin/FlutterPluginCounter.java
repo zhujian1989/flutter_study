@@ -2,8 +2,10 @@ package com.jzhu.flutterstudy.plugin;
 
 import android.app.Activity;
 import android.util.Log;
+import io.flutter.plugin.common.BasicMessageChannel;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.PluginRegistry;
+import io.flutter.plugin.common.StringCodec;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
@@ -18,6 +20,8 @@ public class FlutterPluginCounter implements EventChannel.StreamHandler {
 
     private Activity activity;
 
+    static BasicMessageChannel basicMessageChannel;
+
     private FlutterPluginCounter(Activity activity) {
         this.activity = activity;
     }
@@ -26,6 +30,7 @@ public class FlutterPluginCounter implements EventChannel.StreamHandler {
         channel = new EventChannel(registrar.messenger(), CHANNEL);
         FlutterPluginCounter instance = new FlutterPluginCounter(registrar.activity());
         channel.setStreamHandler(instance);
+        basicMessageChannel = new BasicMessageChannel<String> ("foo", StringCodec.INSTANCE);
     }
 
     @Override
